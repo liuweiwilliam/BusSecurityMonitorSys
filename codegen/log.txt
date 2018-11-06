@@ -1,0 +1,1051 @@
+2017-07-19 18:46:37 start generate.
+2017-07-19 18:46:37 start handle template templete/pojo.txt .
+2017-07-19 18:46:37 unknown keyword or variable name "i".
+2017-07-19 18:46:37 handle template templete/pojo.txt complete.
+2017-07-19 18:46:37 start handle template templete/hib_conf.txt .
+2017-07-19 18:46:37 handle template templete/hib_conf.txt complete.
+2017-07-19 18:46:37 start handle template templete/service.txt .
+2017-07-19 18:50:18 start generate.
+2017-07-19 18:50:18 start handle template templete/pojo.txt .
+2017-07-19 18:50:18 unknown keyword or variable name "i".
+2017-07-19 18:50:18 handle template templete/pojo.txt complete.
+2017-07-19 18:50:18 start handle template templete/hib_conf.txt .
+2017-07-19 18:50:18 handle template templete/hib_conf.txt complete.
+2017-07-19 18:50:18 start handle template templete/service.txt .
+2017-07-19 18:52:03 start generate.
+2017-07-19 18:52:04 start handle template templete/pojo.txt .
+2017-07-19 18:52:04 unknown keyword or variable name "i".
+2017-07-19 18:52:04 handle template templete/pojo.txt complete.
+2017-07-19 18:52:04 start handle template templete/hib_conf.txt .
+2017-07-19 18:52:04 handle template templete/hib_conf.txt complete.
+2017-07-19 18:52:04 start handle template templete/service.txt .
+2017-07-19 18:52:04 handle template templete/service.txt complete.
+2017-07-19 18:52:04 generate success.
+2017-07-19 18:53:09 start generate.
+2017-07-19 18:53:09 start handle template templete/pojo.txt .
+2017-07-19 18:53:09 unknown keyword or variable name "i".
+2017-07-19 18:53:09 handle template templete/pojo.txt complete.
+2017-07-19 18:53:09 start handle template templete/hib_conf.txt .
+2017-07-19 18:53:09 handle template templete/hib_conf.txt complete.
+2017-07-19 18:53:09 start handle template templete/service.txt .
+2017-07-19 18:53:09 handle template templete/service.txt complete.
+2017-07-19 18:53:09 generate success.
+2017-07-19 18:53:47 start generate.
+2017-07-19 18:53:47 start handle template templete/pojo.txt .
+2017-07-19 18:53:47 unknown keyword or variable name "i".
+2017-07-19 18:53:47 handle template templete/pojo.txt complete.
+2017-07-19 18:53:47 start handle template templete/hib_conf.txt .
+2017-07-19 18:53:47 handle template templete/hib_conf.txt complete.
+2017-07-19 18:53:47 start handle template templete/service.txt .
+2017-07-19 18:53:47 template file "templete/service.txt" has incrorrect loop syntax format nearby "[loop service_list]".
+2017-07-19 18:55:02 start generate.
+2017-07-19 18:55:02 start handle template templete/pojo.txt .
+2017-07-19 18:55:03 unknown keyword or variable name "i".
+2017-07-19 18:55:03 handle template templete/pojo.txt complete.
+2017-07-19 18:55:03 start handle template templete/hib_conf.txt .
+2017-07-19 18:55:03 handle template templete/hib_conf.txt complete.
+2017-07-19 18:55:03 start handle template templete/service.txt .
+2017-07-19 18:55:03 handle template templete/service.txt complete.
+2017-07-19 18:55:03 generate success.
+2017-07-19 18:55:28 start generate.
+2017-07-19 18:55:28 start handle template templete/pojo.txt .
+2017-07-19 18:55:28 unknown keyword or variable name "i".
+2017-07-19 18:55:28 handle template templete/pojo.txt complete.
+2017-07-19 18:55:28 start handle template templete/hib_conf.txt .
+2017-07-19 18:55:28 handle template templete/hib_conf.txt complete.
+2017-07-19 18:55:28 start handle template templete/service.txt .
+2017-07-19 18:55:28 handle template templete/service.txt complete.
+2017-07-19 18:55:28 generate success.
+2017-07-19 18:55:54 start generate.
+2017-07-19 18:55:54 start handle template templete/pojo.txt .
+2017-07-19 18:55:54 unknown keyword or variable name "i".
+2017-07-19 18:55:54 handle template templete/pojo.txt complete.
+2017-07-19 18:55:54 start handle template templete/hib_conf.txt .
+2017-07-19 18:55:54 handle template templete/hib_conf.txt complete.
+2017-07-19 18:55:54 start handle template templete/service.txt .
+2017-07-19 18:56:52 start generate.
+2017-07-19 18:56:52 start handle template templete/pojo.txt .
+2017-07-19 18:56:52 unknown keyword or variable name "i".
+2017-07-19 18:56:52 handle template templete/pojo.txt complete.
+2017-07-19 18:56:52 start handle template templete/hib_conf.txt .
+2017-07-19 18:56:52 handle template templete/hib_conf.txt complete.
+2017-07-19 18:56:52 start handle template templete/service.txt .
+2017-07-19 18:56:52 handle template templete/service.txt complete.
+2017-07-19 18:56:52 generate success.
+2017-07-19 18:58:50 start generate.
+2017-07-19 18:58:50 start handle template templete/pojo.txt .
+2017-07-19 18:58:50 unknown keyword or variable name "i".
+2017-07-19 18:58:50 handle template templete/pojo.txt complete.
+2017-07-19 18:58:50 start handle template templete/hib_conf.txt .
+2017-07-19 18:58:50 handle template templete/hib_conf.txt complete.
+2017-07-19 18:58:50 start handle template templete/service.txt .
+2017-07-19 18:58:51 handle template templete/service.txt complete.
+2017-07-19 18:58:51 generate success.
+2017-07-19 18:59:48 start generate.
+2017-07-19 18:59:48 start handle template templete/pojo.txt .
+2017-07-19 18:59:49 unknown keyword or variable name "i".
+2017-07-19 18:59:49 handle template templete/pojo.txt complete.
+2017-07-19 18:59:49 start handle template templete/hib_conf.txt .
+2017-07-19 18:59:49 handle template templete/hib_conf.txt complete.
+2017-07-19 18:59:49 start handle template templete/service.txt .
+2017-07-19 18:59:49 handle template templete/service.txt complete.
+2017-07-19 18:59:49 start handle template templete/cachemgr.txt .
+2017-07-19 18:59:49 handle template templete/cachemgr.txt complete.
+2017-07-19 18:59:49 generate success.
+2017-07-19 19:00:44 start generate.
+2017-07-19 19:00:44 start handle template templete/cachemgr.txt .
+2017-07-19 19:00:44 handle template templete/cachemgr.txt complete.
+2017-07-19 19:00:44 start handle template templete/cachemgr.txt .
+2017-07-19 19:00:44 handle template templete/cachemgr.txt complete.
+2017-07-19 19:00:44 start handle template templete/XtlCacheSync.txt .
+2017-07-19 19:00:44 unknown keyword or variable name "dao_imp_class".
+2017-07-19 19:00:44 unknown keyword or variable name "dao_name".
+2017-07-19 19:00:44 unknown keyword or variable name "dao_imp_class".
+2017-07-19 19:00:44 unknown keyword or variable name "dao_name".
+2017-07-19 19:00:44 handle template templete/XtlCacheSync.txt complete.
+2017-07-19 19:00:44 start handle template templete/pojo.txt .
+2017-07-19 19:00:44 unknown keyword or variable name "i".
+2017-07-19 19:00:44 handle template templete/pojo.txt complete.
+2017-07-19 19:00:44 start handle template templete/hib_conf.txt .
+2017-07-19 19:00:44 handle template templete/hib_conf.txt complete.
+2017-07-19 19:00:44 start handle template templete/pojo.txt .
+2017-07-19 19:00:44 unknown keyword or variable name "i".
+2017-07-19 19:00:44 handle template templete/pojo.txt complete.
+2017-07-19 19:00:44 start handle template templete/hib_conf.txt .
+2017-07-19 19:00:44 handle template templete/hib_conf.txt complete.
+2017-07-19 19:00:44 start handle template templete/service.txt .
+2017-07-19 19:00:44 handle template templete/service.txt complete.
+2017-07-19 19:00:44 start handle template templete/service.txt .
+2017-07-19 19:00:44 condition statement "one_par_list.attr_type==long" has illegal variable !!!
+2017-07-19 19:03:45 start generate.
+2017-07-19 19:03:45 start handle template templete/cachemgr.txt .
+2017-07-19 19:03:45 handle template templete/cachemgr.txt complete.
+2017-07-19 19:03:45 start handle template templete/cachemgr.txt .
+2017-07-19 19:03:45 handle template templete/cachemgr.txt complete.
+2017-07-19 19:03:45 start handle template templete/XtlCacheSync.txt .
+2017-07-19 19:03:45 unknown keyword or variable name "dao_imp_class".
+2017-07-19 19:03:45 unknown keyword or variable name "dao_name".
+2017-07-19 19:03:45 unknown keyword or variable name "dao_imp_class".
+2017-07-19 19:03:45 unknown keyword or variable name "dao_name".
+2017-07-19 19:03:45 handle template templete/XtlCacheSync.txt complete.
+2017-07-19 19:03:45 start handle template templete/pojo.txt .
+2017-07-19 19:03:45 unknown keyword or variable name "i".
+2017-07-19 19:03:45 handle template templete/pojo.txt complete.
+2017-07-19 19:03:45 start handle template templete/hib_conf.txt .
+2017-07-19 19:03:45 handle template templete/hib_conf.txt complete.
+2017-07-19 19:03:45 start handle template templete/pojo.txt .
+2017-07-19 19:03:45 unknown keyword or variable name "i".
+2017-07-19 19:03:46 handle template templete/pojo.txt complete.
+2017-07-19 19:03:46 start handle template templete/hib_conf.txt .
+2017-07-19 19:03:46 handle template templete/hib_conf.txt complete.
+2017-07-19 19:03:46 start handle template templete/service.txt .
+2017-07-19 19:03:46 handle template templete/service.txt complete.
+2017-07-19 19:03:46 start handle template templete/service.txt .
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 unknown keyword or variable name "one_par_list.attr_uname1".
+2017-07-19 19:03:46 handle template templete/service.txt complete.
+2017-07-19 19:03:46 generate success.
+2017-07-19 19:21:17 start generate.
+2017-07-19 19:21:17 start handle template templete/cachemgr.txt .
+2017-07-19 19:21:17 handle template templete/cachemgr.txt complete.
+2017-07-19 19:21:17 start handle template templete/cachemgr.txt .
+2017-07-19 19:21:18 handle template templete/cachemgr.txt complete.
+2017-07-19 19:21:18 start handle template templete/XtlCacheSync.txt .
+2017-07-19 19:21:18 unknown keyword or variable name "dao_imp_class".
+2017-07-19 19:21:18 unknown keyword or variable name "dao_name".
+2017-07-19 19:21:18 unknown keyword or variable name "dao_imp_class".
+2017-07-19 19:21:18 unknown keyword or variable name "dao_name".
+2017-07-19 19:21:18 handle template templete/XtlCacheSync.txt complete.
+2017-07-19 19:21:18 start handle template templete/pojo.txt .
+2017-07-19 19:21:18 unknown keyword or variable name "i".
+2017-07-19 19:21:18 handle template templete/pojo.txt complete.
+2017-07-19 19:21:18 start handle template templete/hib_conf.txt .
+2017-07-19 19:21:18 handle template templete/hib_conf.txt complete.
+2017-07-19 19:21:18 start handle template templete/pojo.txt .
+2017-07-19 19:21:18 unknown keyword or variable name "i".
+2017-07-19 19:21:18 handle template templete/pojo.txt complete.
+2017-07-19 19:21:18 start handle template templete/hib_conf.txt .
+2017-07-19 19:21:18 handle template templete/hib_conf.txt complete.
+2017-07-19 19:21:18 start handle template templete/service.txt .
+2017-07-19 19:21:18 handle template templete/service.txt complete.
+2017-07-19 19:21:18 start handle template templete/service.txt .
+2017-07-19 19:21:18 handle template templete/service.txt complete.
+2017-07-19 19:21:18 generate success.
+2017-07-20 08:56:40 start generate.
+2017-07-20 08:56:40 start handle template templete/cachemgr.txt .
+2017-07-20 08:56:40 handle template templete/cachemgr.txt complete.
+2017-07-20 08:56:40 start handle template templete/cachemgr.txt .
+2017-07-20 08:56:40 handle template templete/cachemgr.txt complete.
+2017-07-20 08:56:40 start handle template templete/XtlCacheSync.txt .
+2017-07-20 08:56:40 unknown keyword or variable name "dao_imp_class".
+2017-07-20 08:56:40 unknown keyword or variable name "dao_name".
+2017-07-20 08:56:40 unknown keyword or variable name "dao_imp_class".
+2017-07-20 08:56:40 unknown keyword or variable name "dao_name".
+2017-07-20 08:56:40 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 08:56:40 start handle template templete/pojo.txt .
+2017-07-20 08:56:40 unknown keyword or variable name "i".
+2017-07-20 08:56:40 handle template templete/pojo.txt complete.
+2017-07-20 08:56:40 start handle template templete/hib_conf.txt .
+2017-07-20 08:56:40 handle template templete/hib_conf.txt complete.
+2017-07-20 08:56:40 start handle template templete/pojo.txt .
+2017-07-20 08:56:40 unknown keyword or variable name "i".
+2017-07-20 08:56:40 handle template templete/pojo.txt complete.
+2017-07-20 08:56:40 start handle template templete/hib_conf.txt .
+2017-07-20 08:56:40 handle template templete/hib_conf.txt complete.
+2017-07-20 08:56:40 start handle template templete/service.txt .
+2017-07-20 08:56:41 handle template templete/service.txt complete.
+2017-07-20 08:56:41 start handle template templete/service.txt .
+2017-07-20 08:56:41 handle template templete/service.txt complete.
+2017-07-20 08:56:41 generate success.
+2017-07-20 08:57:51 start generate.
+2017-07-20 08:57:51 start handle template templete/cachemgr.txt .
+2017-07-20 08:57:51 handle template templete/cachemgr.txt complete.
+2017-07-20 08:57:51 start handle template templete/cachemgr.txt .
+2017-07-20 08:57:51 handle template templete/cachemgr.txt complete.
+2017-07-20 08:57:51 start handle template templete/XtlCacheSync.txt .
+2017-07-20 08:57:51 unknown keyword or variable name "dao_imp_class".
+2017-07-20 08:57:51 unknown keyword or variable name "dao_name".
+2017-07-20 08:57:51 unknown keyword or variable name "dao_imp_class".
+2017-07-20 08:57:51 unknown keyword or variable name "dao_name".
+2017-07-20 08:57:51 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 08:57:51 start handle template templete/pojo.txt .
+2017-07-20 08:57:51 unknown keyword or variable name "i".
+2017-07-20 08:57:51 handle template templete/pojo.txt complete.
+2017-07-20 08:57:51 start handle template templete/hib_conf.txt .
+2017-07-20 08:57:51 handle template templete/hib_conf.txt complete.
+2017-07-20 08:57:51 start handle template templete/pojo.txt .
+2017-07-20 08:57:51 unknown keyword or variable name "i".
+2017-07-20 08:57:51 handle template templete/pojo.txt complete.
+2017-07-20 08:57:51 start handle template templete/hib_conf.txt .
+2017-07-20 08:57:51 handle template templete/hib_conf.txt complete.
+2017-07-20 08:57:51 start handle template templete/service.txt .
+2017-07-20 08:57:51 handle template templete/service.txt complete.
+2017-07-20 08:57:51 start handle template templete/service.txt .
+2017-07-20 08:57:52 handle template templete/service.txt complete.
+2017-07-20 08:57:52 generate success.
+2017-07-20 09:00:11 start generate.
+2017-07-20 09:00:11 start handle template templete/cachemgr.txt .
+2017-07-20 09:00:11 handle template templete/cachemgr.txt complete.
+2017-07-20 09:00:11 start handle template templete/cachemgr.txt .
+2017-07-20 09:00:11 handle template templete/cachemgr.txt complete.
+2017-07-20 09:00:11 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:00:11 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:00:11 unknown keyword or variable name "dao_name".
+2017-07-20 09:00:11 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:00:11 unknown keyword or variable name "dao_name".
+2017-07-20 09:00:11 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:00:11 start handle template templete/pojo.txt .
+2017-07-20 09:00:11 unknown keyword or variable name "i".
+2017-07-20 09:00:11 handle template templete/pojo.txt complete.
+2017-07-20 09:00:11 start handle template templete/hib_conf.txt .
+2017-07-20 09:00:11 handle template templete/hib_conf.txt complete.
+2017-07-20 09:00:11 start handle template templete/pojo.txt .
+2017-07-20 09:00:11 unknown keyword or variable name "i".
+2017-07-20 09:00:11 handle template templete/pojo.txt complete.
+2017-07-20 09:00:11 start handle template templete/hib_conf.txt .
+2017-07-20 09:00:11 handle template templete/hib_conf.txt complete.
+2017-07-20 09:00:11 start handle template templete/service.txt .
+2017-07-20 09:00:11 handle template templete/service.txt complete.
+2017-07-20 09:00:11 start handle template templete/service.txt .
+2017-07-20 09:00:11 handle template templete/service.txt complete.
+2017-07-20 09:00:11 generate success.
+2017-07-20 09:02:13 start generate.
+2017-07-20 09:02:14 start handle template templete/cachemgr.txt .
+2017-07-20 09:02:14 handle template templete/cachemgr.txt complete.
+2017-07-20 09:02:14 start handle template templete/cachemgr.txt .
+2017-07-20 09:02:14 handle template templete/cachemgr.txt complete.
+2017-07-20 09:02:14 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:02:14 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:02:14 unknown keyword or variable name "dao_name".
+2017-07-20 09:02:14 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:02:14 unknown keyword or variable name "dao_name".
+2017-07-20 09:02:14 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:02:14 start handle template templete/pojo.txt .
+2017-07-20 09:02:14 unknown keyword or variable name "i".
+2017-07-20 09:02:14 handle template templete/pojo.txt complete.
+2017-07-20 09:02:14 start handle template templete/hib_conf.txt .
+2017-07-20 09:02:14 handle template templete/hib_conf.txt complete.
+2017-07-20 09:02:14 start handle template templete/pojo.txt .
+2017-07-20 09:02:14 unknown keyword or variable name "i".
+2017-07-20 09:02:14 handle template templete/pojo.txt complete.
+2017-07-20 09:02:14 start handle template templete/hib_conf.txt .
+2017-07-20 09:02:14 handle template templete/hib_conf.txt complete.
+2017-07-20 09:02:14 start handle template templete/service.txt .
+2017-07-20 09:02:14 handle template templete/service.txt complete.
+2017-07-20 09:02:14 start handle template templete/service.txt .
+2017-07-20 09:02:14 handle template templete/service.txt complete.
+2017-07-20 09:02:14 generate success.
+2017-07-20 09:02:54 start generate.
+2017-07-20 09:02:54 start handle template templete/cachemgr.txt .
+2017-07-20 09:02:54 handle template templete/cachemgr.txt complete.
+2017-07-20 09:02:54 start handle template templete/cachemgr.txt .
+2017-07-20 09:02:55 handle template templete/cachemgr.txt complete.
+2017-07-20 09:02:55 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:02:55 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:02:55 unknown keyword or variable name "dao_name".
+2017-07-20 09:02:55 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:02:55 unknown keyword or variable name "dao_name".
+2017-07-20 09:02:55 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:02:55 start handle template templete/pojo.txt .
+2017-07-20 09:02:55 unknown keyword or variable name "i".
+2017-07-20 09:02:55 handle template templete/pojo.txt complete.
+2017-07-20 09:02:55 start handle template templete/hib_conf.txt .
+2017-07-20 09:02:55 handle template templete/hib_conf.txt complete.
+2017-07-20 09:02:55 start handle template templete/pojo.txt .
+2017-07-20 09:02:55 unknown keyword or variable name "i".
+2017-07-20 09:02:55 handle template templete/pojo.txt complete.
+2017-07-20 09:02:55 start handle template templete/hib_conf.txt .
+2017-07-20 09:02:55 handle template templete/hib_conf.txt complete.
+2017-07-20 09:02:55 start handle template templete/service.txt .
+2017-07-20 09:02:55 handle template templete/service.txt complete.
+2017-07-20 09:02:55 start handle template templete/service.txt .
+2017-07-20 09:02:55 handle template templete/service.txt complete.
+2017-07-20 09:02:55 generate success.
+2017-07-20 09:05:09 start generate.
+2017-07-20 09:05:09 start handle template templete/cachemgr.txt .
+2017-07-20 09:05:09 handle template templete/cachemgr.txt complete.
+2017-07-20 09:05:09 start handle template templete/cachemgr.txt .
+2017-07-20 09:05:09 handle template templete/cachemgr.txt complete.
+2017-07-20 09:05:09 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:05:09 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:05:09 unknown keyword or variable name "dao_name".
+2017-07-20 09:05:09 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:05:10 unknown keyword or variable name "dao_name".
+2017-07-20 09:05:10 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:05:10 start handle template templete/pojo.txt .
+2017-07-20 09:05:10 unknown keyword or variable name "i".
+2017-07-20 09:05:10 handle template templete/pojo.txt complete.
+2017-07-20 09:05:10 start handle template templete/hib_conf.txt .
+2017-07-20 09:05:10 handle template templete/hib_conf.txt complete.
+2017-07-20 09:05:10 start handle template templete/pojo.txt .
+2017-07-20 09:05:10 unknown keyword or variable name "i".
+2017-07-20 09:05:10 handle template templete/pojo.txt complete.
+2017-07-20 09:05:10 start handle template templete/hib_conf.txt .
+2017-07-20 09:05:10 handle template templete/hib_conf.txt complete.
+2017-07-20 09:05:10 start handle template templete/service.txt .
+2017-07-20 09:05:10 handle template templete/service.txt complete.
+2017-07-20 09:05:10 start handle template templete/service.txt .
+2017-07-20 09:05:10 handle template templete/service.txt complete.
+2017-07-20 09:05:10 generate success.
+2017-07-20 09:06:21 start generate.
+2017-07-20 09:06:21 start handle template templete/cachemgr.txt .
+2017-07-20 09:06:22 handle template templete/cachemgr.txt complete.
+2017-07-20 09:06:22 start handle template templete/cachemgr.txt .
+2017-07-20 09:06:22 handle template templete/cachemgr.txt complete.
+2017-07-20 09:06:22 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:06:22 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:06:22 unknown keyword or variable name "dao_name".
+2017-07-20 09:06:22 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:06:22 unknown keyword or variable name "dao_name".
+2017-07-20 09:06:22 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:06:22 start handle template templete/pojo.txt .
+2017-07-20 09:06:22 unknown keyword or variable name "i".
+2017-07-20 09:06:22 handle template templete/pojo.txt complete.
+2017-07-20 09:06:22 start handle template templete/hib_conf.txt .
+2017-07-20 09:06:22 handle template templete/hib_conf.txt complete.
+2017-07-20 09:06:22 start handle template templete/pojo.txt .
+2017-07-20 09:06:22 unknown keyword or variable name "i".
+2017-07-20 09:06:22 handle template templete/pojo.txt complete.
+2017-07-20 09:06:22 start handle template templete/hib_conf.txt .
+2017-07-20 09:06:22 handle template templete/hib_conf.txt complete.
+2017-07-20 09:06:22 start handle template templete/service.txt .
+2017-07-20 09:06:22 handle template templete/service.txt complete.
+2017-07-20 09:06:22 start handle template templete/service.txt .
+2017-07-20 09:06:22 handle template templete/service.txt complete.
+2017-07-20 09:06:22 generate success.
+2017-07-20 09:07:52 start generate.
+2017-07-20 09:07:52 start handle template templete/cachemgr.txt .
+2017-07-20 09:07:52 handle template templete/cachemgr.txt complete.
+2017-07-20 09:07:52 start handle template templete/cachemgr.txt .
+2017-07-20 09:07:52 handle template templete/cachemgr.txt complete.
+2017-07-20 09:07:52 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:07:52 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:07:52 unknown keyword or variable name "dao_name".
+2017-07-20 09:07:52 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:07:52 unknown keyword or variable name "dao_name".
+2017-07-20 09:07:52 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:07:52 start handle template templete/pojo.txt .
+2017-07-20 09:07:52 unknown keyword or variable name "i".
+2017-07-20 09:07:52 handle template templete/pojo.txt complete.
+2017-07-20 09:07:52 start handle template templete/hib_conf.txt .
+2017-07-20 09:07:53 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:08:41 start generate.
+2017-07-20 09:08:41 start handle template templete/cachemgr.txt .
+2017-07-20 09:08:41 handle template templete/cachemgr.txt complete.
+2017-07-20 09:08:41 start handle template templete/cachemgr.txt .
+2017-07-20 09:08:41 handle template templete/cachemgr.txt complete.
+2017-07-20 09:08:41 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:08:41 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:08:41 unknown keyword or variable name "dao_name".
+2017-07-20 09:08:41 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:08:42 unknown keyword or variable name "dao_name".
+2017-07-20 09:08:42 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:08:42 start handle template templete/pojo.txt .
+2017-07-20 09:08:42 unknown keyword or variable name "i".
+2017-07-20 09:08:42 handle template templete/pojo.txt complete.
+2017-07-20 09:08:42 start handle template templete/hib_conf.txt .
+2017-07-20 09:08:42 handle template templete/hib_conf.txt complete.
+2017-07-20 09:08:42 start handle template templete/pojo.txt .
+2017-07-20 09:08:42 unknown keyword or variable name "i".
+2017-07-20 09:08:42 handle template templete/pojo.txt complete.
+2017-07-20 09:08:42 start handle template templete/hib_conf.txt .
+2017-07-20 09:08:42 handle template templete/hib_conf.txt complete.
+2017-07-20 09:08:42 start handle template templete/service.txt .
+2017-07-20 09:08:42 handle template templete/service.txt complete.
+2017-07-20 09:08:42 start handle template templete/service.txt .
+2017-07-20 09:08:42 handle template templete/service.txt complete.
+2017-07-20 09:08:42 generate success.
+2017-07-20 09:09:05 start generate.
+2017-07-20 09:09:05 start handle template templete/cachemgr.txt .
+2017-07-20 09:09:05 handle template templete/cachemgr.txt complete.
+2017-07-20 09:09:05 start handle template templete/cachemgr.txt .
+2017-07-20 09:09:05 handle template templete/cachemgr.txt complete.
+2017-07-20 09:09:05 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:09:05 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:09:05 unknown keyword or variable name "dao_name".
+2017-07-20 09:09:05 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:09:05 unknown keyword or variable name "dao_name".
+2017-07-20 09:09:05 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:09:05 start handle template templete/pojo.txt .
+2017-07-20 09:09:05 unknown keyword or variable name "i".
+2017-07-20 09:09:05 handle template templete/pojo.txt complete.
+2017-07-20 09:09:05 start handle template templete/hib_conf.txt .
+2017-07-20 09:09:05 handle template templete/hib_conf.txt complete.
+2017-07-20 09:09:05 start handle template templete/pojo.txt .
+2017-07-20 09:09:06 unknown keyword or variable name "i".
+2017-07-20 09:09:06 handle template templete/pojo.txt complete.
+2017-07-20 09:09:06 start handle template templete/hib_conf.txt .
+2017-07-20 09:09:06 handle template templete/hib_conf.txt complete.
+2017-07-20 09:09:06 start handle template templete/service.txt .
+2017-07-20 09:09:06 handle template templete/service.txt complete.
+2017-07-20 09:09:06 start handle template templete/service.txt .
+2017-07-20 09:09:06 handle template templete/service.txt complete.
+2017-07-20 09:09:06 generate success.
+2017-07-20 09:10:13 start generate.
+2017-07-20 09:10:13 start handle template templete/cachemgr.txt .
+2017-07-20 09:10:13 handle template templete/cachemgr.txt complete.
+2017-07-20 09:10:13 start handle template templete/cachemgr.txt .
+2017-07-20 09:10:13 handle template templete/cachemgr.txt complete.
+2017-07-20 09:10:13 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:10:13 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:10:13 unknown keyword or variable name "dao_name".
+2017-07-20 09:10:13 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:10:13 unknown keyword or variable name "dao_name".
+2017-07-20 09:10:13 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:10:13 start handle template templete/pojo.txt .
+2017-07-20 09:10:13 unknown keyword or variable name "i".
+2017-07-20 09:10:13 handle template templete/pojo.txt complete.
+2017-07-20 09:10:14 start handle template templete/hib_conf.txt .
+2017-07-20 09:10:14 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:10:55 start generate.
+2017-07-20 09:10:55 start handle template templete/cachemgr.txt .
+2017-07-20 09:10:55 handle template templete/cachemgr.txt complete.
+2017-07-20 09:10:55 start handle template templete/cachemgr.txt .
+2017-07-20 09:10:56 handle template templete/cachemgr.txt complete.
+2017-07-20 09:10:56 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:10:56 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:10:56 unknown keyword or variable name "dao_name".
+2017-07-20 09:10:56 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:10:56 unknown keyword or variable name "dao_name".
+2017-07-20 09:10:56 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:10:56 start handle template templete/pojo.txt .
+2017-07-20 09:10:56 unknown keyword or variable name "i".
+2017-07-20 09:10:56 handle template templete/pojo.txt complete.
+2017-07-20 09:10:56 start handle template templete/hib_conf.txt .
+2017-07-20 09:10:56 handle template templete/hib_conf.txt complete.
+2017-07-20 09:10:56 start handle template templete/pojo.txt .
+2017-07-20 09:10:56 unknown keyword or variable name "i".
+2017-07-20 09:10:56 handle template templete/pojo.txt complete.
+2017-07-20 09:10:56 start handle template templete/hib_conf.txt .
+2017-07-20 09:10:56 handle template templete/hib_conf.txt complete.
+2017-07-20 09:10:56 start handle template templete/service.txt .
+2017-07-20 09:10:56 handle template templete/service.txt complete.
+2017-07-20 09:10:56 start handle template templete/service.txt .
+2017-07-20 09:10:56 handle template templete/service.txt complete.
+2017-07-20 09:10:56 generate success.
+2017-07-20 09:11:39 start generate.
+2017-07-20 09:11:40 start handle template templete/cachemgr.txt .
+2017-07-20 09:11:40 handle template templete/cachemgr.txt complete.
+2017-07-20 09:11:40 start handle template templete/cachemgr.txt .
+2017-07-20 09:11:40 handle template templete/cachemgr.txt complete.
+2017-07-20 09:11:40 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:11:40 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:11:40 unknown keyword or variable name "dao_name".
+2017-07-20 09:11:40 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:11:40 unknown keyword or variable name "dao_name".
+2017-07-20 09:11:40 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:11:40 start handle template templete/pojo.txt .
+2017-07-20 09:11:40 unknown keyword or variable name "i".
+2017-07-20 09:11:40 handle template templete/pojo.txt complete.
+2017-07-20 09:11:40 start handle template templete/hib_conf.txt .
+2017-07-20 09:11:40 handle template templete/hib_conf.txt complete.
+2017-07-20 09:11:40 start handle template templete/pojo.txt .
+2017-07-20 09:11:40 unknown keyword or variable name "i".
+2017-07-20 09:11:40 handle template templete/pojo.txt complete.
+2017-07-20 09:11:40 start handle template templete/hib_conf.txt .
+2017-07-20 09:11:40 handle template templete/hib_conf.txt complete.
+2017-07-20 09:11:40 start handle template templete/service.txt .
+2017-07-20 09:11:40 handle template templete/service.txt complete.
+2017-07-20 09:11:41 start handle template templete/service.txt .
+2017-07-20 09:11:41 handle template templete/service.txt complete.
+2017-07-20 09:11:41 generate success.
+2017-07-20 09:12:13 start generate.
+2017-07-20 09:12:13 start handle template templete/cachemgr.txt .
+2017-07-20 09:12:13 handle template templete/cachemgr.txt complete.
+2017-07-20 09:12:13 start handle template templete/cachemgr.txt .
+2017-07-20 09:12:14 handle template templete/cachemgr.txt complete.
+2017-07-20 09:12:14 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:12:14 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:12:14 unknown keyword or variable name "dao_name".
+2017-07-20 09:12:14 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:12:14 unknown keyword or variable name "dao_name".
+2017-07-20 09:12:14 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:12:14 start handle template templete/pojo.txt .
+2017-07-20 09:12:14 unknown keyword or variable name "i".
+2017-07-20 09:12:14 handle template templete/pojo.txt complete.
+2017-07-20 09:12:14 start handle template templete/hib_conf.txt .
+2017-07-20 09:12:14 handle template templete/hib_conf.txt complete.
+2017-07-20 09:12:14 start handle template templete/pojo.txt .
+2017-07-20 09:12:14 unknown keyword or variable name "i".
+2017-07-20 09:12:14 handle template templete/pojo.txt complete.
+2017-07-20 09:12:14 start handle template templete/hib_conf.txt .
+2017-07-20 09:12:14 handle template templete/hib_conf.txt complete.
+2017-07-20 09:12:14 start handle template templete/service.txt .
+2017-07-20 09:12:14 handle template templete/service.txt complete.
+2017-07-20 09:12:14 start handle template templete/service.txt .
+2017-07-20 09:12:14 handle template templete/service.txt complete.
+2017-07-20 09:12:14 generate success.
+2017-07-20 09:12:35 start generate.
+2017-07-20 09:12:36 start handle template templete/cachemgr.txt .
+2017-07-20 09:12:36 handle template templete/cachemgr.txt complete.
+2017-07-20 09:12:36 start handle template templete/cachemgr.txt .
+2017-07-20 09:12:36 handle template templete/cachemgr.txt complete.
+2017-07-20 09:12:36 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:12:36 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:12:36 unknown keyword or variable name "dao_name".
+2017-07-20 09:12:36 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:12:36 unknown keyword or variable name "dao_name".
+2017-07-20 09:12:36 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:12:36 start handle template templete/pojo.txt .
+2017-07-20 09:12:36 unknown keyword or variable name "i".
+2017-07-20 09:12:36 handle template templete/pojo.txt complete.
+2017-07-20 09:12:36 start handle template templete/hib_conf.txt .
+2017-07-20 09:12:36 handle template templete/hib_conf.txt complete.
+2017-07-20 09:12:36 start handle template templete/pojo.txt .
+2017-07-20 09:12:36 unknown keyword or variable name "i".
+2017-07-20 09:12:36 handle template templete/pojo.txt complete.
+2017-07-20 09:12:36 start handle template templete/hib_conf.txt .
+2017-07-20 09:12:36 handle template templete/hib_conf.txt complete.
+2017-07-20 09:12:36 start handle template templete/service.txt .
+2017-07-20 09:12:36 handle template templete/service.txt complete.
+2017-07-20 09:12:37 start handle template templete/service.txt .
+2017-07-20 09:12:37 handle template templete/service.txt complete.
+2017-07-20 09:12:37 generate success.
+2017-07-20 09:13:03 start generate.
+2017-07-20 09:13:03 start handle template templete/cachemgr.txt .
+2017-07-20 09:13:03 handle template templete/cachemgr.txt complete.
+2017-07-20 09:13:03 start handle template templete/cachemgr.txt .
+2017-07-20 09:13:03 handle template templete/cachemgr.txt complete.
+2017-07-20 09:13:03 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:13:03 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:13:03 unknown keyword or variable name "dao_name".
+2017-07-20 09:13:03 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:13:03 unknown keyword or variable name "dao_name".
+2017-07-20 09:13:03 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:13:03 start handle template templete/pojo.txt .
+2017-07-20 09:13:03 unknown keyword or variable name "i".
+2017-07-20 09:13:03 handle template templete/pojo.txt complete.
+2017-07-20 09:13:03 start handle template templete/hib_conf.txt .
+2017-07-20 09:13:03 handle template templete/hib_conf.txt complete.
+2017-07-20 09:13:03 start handle template templete/pojo.txt .
+2017-07-20 09:13:03 unknown keyword or variable name "i".
+2017-07-20 09:13:04 handle template templete/pojo.txt complete.
+2017-07-20 09:13:04 start handle template templete/hib_conf.txt .
+2017-07-20 09:13:04 handle template templete/hib_conf.txt complete.
+2017-07-20 09:13:04 start handle template templete/service.txt .
+2017-07-20 09:13:04 handle template templete/service.txt complete.
+2017-07-20 09:13:04 start handle template templete/service.txt .
+2017-07-20 09:13:04 handle template templete/service.txt complete.
+2017-07-20 09:13:04 generate success.
+2017-07-20 09:13:24 start generate.
+2017-07-20 09:13:24 start handle template templete/cachemgr.txt .
+2017-07-20 09:13:24 handle template templete/cachemgr.txt complete.
+2017-07-20 09:13:24 start handle template templete/cachemgr.txt .
+2017-07-20 09:13:24 handle template templete/cachemgr.txt complete.
+2017-07-20 09:13:24 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:13:24 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:13:24 unknown keyword or variable name "dao_name".
+2017-07-20 09:13:25 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:13:25 unknown keyword or variable name "dao_name".
+2017-07-20 09:13:25 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:13:25 start handle template templete/pojo.txt .
+2017-07-20 09:13:25 unknown keyword or variable name "i".
+2017-07-20 09:13:25 handle template templete/pojo.txt complete.
+2017-07-20 09:13:25 start handle template templete/hib_conf.txt .
+2017-07-20 09:13:25 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:13:49 start generate.
+2017-07-20 09:13:49 start handle template templete/cachemgr.txt .
+2017-07-20 09:13:49 handle template templete/cachemgr.txt complete.
+2017-07-20 09:13:49 start handle template templete/cachemgr.txt .
+2017-07-20 09:13:49 handle template templete/cachemgr.txt complete.
+2017-07-20 09:13:49 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:13:49 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:13:49 unknown keyword or variable name "dao_name".
+2017-07-20 09:13:49 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:13:49 unknown keyword or variable name "dao_name".
+2017-07-20 09:13:49 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:13:49 start handle template templete/pojo.txt .
+2017-07-20 09:13:49 unknown keyword or variable name "i".
+2017-07-20 09:13:49 handle template templete/pojo.txt complete.
+2017-07-20 09:13:49 start handle template templete/hib_conf.txt .
+2017-07-20 09:13:50 handle template templete/hib_conf.txt complete.
+2017-07-20 09:13:50 start handle template templete/pojo.txt .
+2017-07-20 09:13:50 unknown keyword or variable name "i".
+2017-07-20 09:13:50 handle template templete/pojo.txt complete.
+2017-07-20 09:13:50 start handle template templete/hib_conf.txt .
+2017-07-20 09:13:50 handle template templete/hib_conf.txt complete.
+2017-07-20 09:13:50 start handle template templete/service.txt .
+2017-07-20 09:13:50 handle template templete/service.txt complete.
+2017-07-20 09:13:50 start handle template templete/service.txt .
+2017-07-20 09:13:50 handle template templete/service.txt complete.
+2017-07-20 09:13:50 generate success.
+2017-07-20 09:14:27 start generate.
+2017-07-20 09:14:27 start handle template templete/cachemgr.txt .
+2017-07-20 09:14:27 handle template templete/cachemgr.txt complete.
+2017-07-20 09:14:27 start handle template templete/cachemgr.txt .
+2017-07-20 09:14:27 handle template templete/cachemgr.txt complete.
+2017-07-20 09:14:27 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:14:27 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:14:27 unknown keyword or variable name "dao_name".
+2017-07-20 09:14:27 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:14:27 unknown keyword or variable name "dao_name".
+2017-07-20 09:14:27 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:14:27 start handle template templete/pojo.txt .
+2017-07-20 09:14:27 unknown keyword or variable name "i".
+2017-07-20 09:14:27 handle template templete/pojo.txt complete.
+2017-07-20 09:14:27 start handle template templete/hib_conf.txt .
+2017-07-20 09:14:28 handle template templete/hib_conf.txt complete.
+2017-07-20 09:14:28 start handle template templete/pojo.txt .
+2017-07-20 09:14:28 unknown keyword or variable name "i".
+2017-07-20 09:14:28 handle template templete/pojo.txt complete.
+2017-07-20 09:14:28 start handle template templete/hib_conf.txt .
+2017-07-20 09:14:28 handle template templete/hib_conf.txt complete.
+2017-07-20 09:14:28 start handle template templete/service.txt .
+2017-07-20 09:14:28 handle template templete/service.txt complete.
+2017-07-20 09:14:28 start handle template templete/service.txt .
+2017-07-20 09:14:28 handle template templete/service.txt complete.
+2017-07-20 09:14:28 generate success.
+2017-07-20 09:26:01 start generate.
+2017-07-20 09:26:01 start handle template templete/cachemgr.txt .
+2017-07-20 09:26:01 handle template templete/cachemgr.txt complete.
+2017-07-20 09:26:01 start handle template templete/cachemgr.txt .
+2017-07-20 09:26:01 handle template templete/cachemgr.txt complete.
+2017-07-20 09:26:01 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:26:01 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:26:01 unknown keyword or variable name "dao_name".
+2017-07-20 09:26:01 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:26:01 unknown keyword or variable name "dao_name".
+2017-07-20 09:26:01 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:26:01 start handle template templete/pojo.txt .
+2017-07-20 09:26:02 unknown keyword or variable name "i".
+2017-07-20 09:26:02 handle template templete/pojo.txt complete.
+2017-07-20 09:26:02 start handle template templete/hib_conf.txt .
+2017-07-20 09:26:02 handle template templete/hib_conf.txt complete.
+2017-07-20 09:26:02 start handle template templete/pojo.txt .
+2017-07-20 09:26:02 unknown keyword or variable name "i".
+2017-07-20 09:26:02 handle template templete/pojo.txt complete.
+2017-07-20 09:26:02 start handle template templete/hib_conf.txt .
+2017-07-20 09:26:02 handle template templete/hib_conf.txt complete.
+2017-07-20 09:26:02 start handle template templete/service.txt .
+2017-07-20 09:26:02 handle template templete/service.txt complete.
+2017-07-20 09:26:02 start handle template templete/service.txt .
+2017-07-20 09:26:02 handle template templete/service.txt complete.
+2017-07-20 09:26:02 generate success.
+2017-07-20 09:26:29 start generate.
+2017-07-20 09:26:30 start handle template templete/cachemgr.txt .
+2017-07-20 09:26:30 handle template templete/cachemgr.txt complete.
+2017-07-20 09:26:30 start handle template templete/cachemgr.txt .
+2017-07-20 09:26:30 handle template templete/cachemgr.txt complete.
+2017-07-20 09:26:30 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:26:30 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:26:30 unknown keyword or variable name "dao_name".
+2017-07-20 09:26:30 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:26:30 unknown keyword or variable name "dao_name".
+2017-07-20 09:26:30 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:26:30 start handle template templete/pojo.txt .
+2017-07-20 09:26:30 unknown keyword or variable name "i".
+2017-07-20 09:26:30 handle template templete/pojo.txt complete.
+2017-07-20 09:26:30 start handle template templete/hib_conf.txt .
+2017-07-20 09:26:30 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:27:58 start generate.
+2017-07-20 09:27:58 start handle template templete/cachemgr.txt .
+2017-07-20 09:27:59 handle template templete/cachemgr.txt complete.
+2017-07-20 09:27:59 start handle template templete/cachemgr.txt .
+2017-07-20 09:27:59 handle template templete/cachemgr.txt complete.
+2017-07-20 09:27:59 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:27:59 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:27:59 unknown keyword or variable name "dao_name".
+2017-07-20 09:27:59 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:27:59 unknown keyword or variable name "dao_name".
+2017-07-20 09:27:59 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:27:59 start handle template templete/pojo.txt .
+2017-07-20 09:27:59 unknown keyword or variable name "i".
+2017-07-20 09:27:59 handle template templete/pojo.txt complete.
+2017-07-20 09:27:59 start handle template templete/hib_conf.txt .
+2017-07-20 09:27:59 handle template templete/hib_conf.txt complete.
+2017-07-20 09:27:59 start handle template templete/pojo.txt .
+2017-07-20 09:27:59 unknown keyword or variable name "i".
+2017-07-20 09:27:59 handle template templete/pojo.txt complete.
+2017-07-20 09:28:00 start handle template templete/hib_conf.txt .
+2017-07-20 09:28:00 handle template templete/hib_conf.txt complete.
+2017-07-20 09:28:00 start handle template templete/service.txt .
+2017-07-20 09:28:00 handle template templete/service.txt complete.
+2017-07-20 09:28:00 start handle template templete/service.txt .
+2017-07-20 09:28:00 handle template templete/service.txt complete.
+2017-07-20 09:28:00 generate success.
+2017-07-20 09:28:31 start generate.
+2017-07-20 09:28:31 start handle template templete/cachemgr.txt .
+2017-07-20 09:28:31 handle template templete/cachemgr.txt complete.
+2017-07-20 09:28:31 start handle template templete/cachemgr.txt .
+2017-07-20 09:28:31 handle template templete/cachemgr.txt complete.
+2017-07-20 09:28:31 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:28:31 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:28:31 unknown keyword or variable name "dao_name".
+2017-07-20 09:28:31 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:28:32 unknown keyword or variable name "dao_name".
+2017-07-20 09:28:32 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:28:32 start handle template templete/pojo.txt .
+2017-07-20 09:28:32 unknown keyword or variable name "i".
+2017-07-20 09:28:32 handle template templete/pojo.txt complete.
+2017-07-20 09:28:32 start handle template templete/hib_conf.txt .
+2017-07-20 09:28:32 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:30:00 start generate.
+2017-07-20 09:30:00 start handle template templete/cachemgr.txt .
+2017-07-20 09:30:01 handle template templete/cachemgr.txt complete.
+2017-07-20 09:30:01 start handle template templete/cachemgr.txt .
+2017-07-20 09:30:01 handle template templete/cachemgr.txt complete.
+2017-07-20 09:30:01 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:30:01 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:30:01 unknown keyword or variable name "dao_name".
+2017-07-20 09:30:01 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:30:01 unknown keyword or variable name "dao_name".
+2017-07-20 09:30:01 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:30:01 start handle template templete/pojo.txt .
+2017-07-20 09:30:01 unknown keyword or variable name "i".
+2017-07-20 09:30:01 handle template templete/pojo.txt complete.
+2017-07-20 09:30:01 start handle template templete/hib_conf.txt .
+2017-07-20 09:30:01 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:30:22 start generate.
+2017-07-20 09:30:22 start handle template templete/cachemgr.txt .
+2017-07-20 09:30:22 handle template templete/cachemgr.txt complete.
+2017-07-20 09:30:23 start handle template templete/cachemgr.txt .
+2017-07-20 09:30:23 handle template templete/cachemgr.txt complete.
+2017-07-20 09:30:23 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:30:23 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:30:23 unknown keyword or variable name "dao_name".
+2017-07-20 09:30:23 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:30:23 unknown keyword or variable name "dao_name".
+2017-07-20 09:30:23 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:30:23 start handle template templete/pojo.txt .
+2017-07-20 09:30:23 unknown keyword or variable name "i".
+2017-07-20 09:30:23 handle template templete/pojo.txt complete.
+2017-07-20 09:30:23 start handle template templete/hib_conf.txt .
+2017-07-20 09:30:23 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:31:26 start generate.
+2017-07-20 09:31:27 start handle template templete/cachemgr.txt .
+2017-07-20 09:31:27 handle template templete/cachemgr.txt complete.
+2017-07-20 09:31:27 start handle template templete/cachemgr.txt .
+2017-07-20 09:31:27 handle template templete/cachemgr.txt complete.
+2017-07-20 09:31:27 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:31:27 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:31:27 unknown keyword or variable name "dao_name".
+2017-07-20 09:31:27 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:31:27 unknown keyword or variable name "dao_name".
+2017-07-20 09:31:27 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:31:27 start handle template templete/pojo.txt .
+2017-07-20 09:31:27 unknown keyword or variable name "i".
+2017-07-20 09:31:27 handle template templete/pojo.txt complete.
+2017-07-20 09:31:27 start handle template templete/hib_conf.txt .
+2017-07-20 09:31:27 handle template templete/hib_conf.txt complete.
+2017-07-20 09:31:27 start handle template templete/pojo.txt .
+2017-07-20 09:31:28 unknown keyword or variable name "i".
+2017-07-20 09:31:28 handle template templete/pojo.txt complete.
+2017-07-20 09:31:28 start handle template templete/hib_conf.txt .
+2017-07-20 09:31:28 handle template templete/hib_conf.txt complete.
+2017-07-20 09:31:28 start handle template templete/service.txt .
+2017-07-20 09:31:28 handle template templete/service.txt complete.
+2017-07-20 09:31:28 start handle template templete/service.txt .
+2017-07-20 09:31:28 handle template templete/service.txt complete.
+2017-07-20 09:31:28 generate success.
+2017-07-20 09:31:57 start generate.
+2017-07-20 09:31:57 start handle template templete/cachemgr.txt .
+2017-07-20 09:31:57 handle template templete/cachemgr.txt complete.
+2017-07-20 09:31:57 start handle template templete/cachemgr.txt .
+2017-07-20 09:31:58 handle template templete/cachemgr.txt complete.
+2017-07-20 09:31:58 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:31:58 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:31:58 unknown keyword or variable name "dao_name".
+2017-07-20 09:31:58 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:31:58 unknown keyword or variable name "dao_name".
+2017-07-20 09:31:58 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:31:58 start handle template templete/pojo.txt .
+2017-07-20 09:31:58 unknown keyword or variable name "i".
+2017-07-20 09:31:58 handle template templete/pojo.txt complete.
+2017-07-20 09:31:58 start handle template templete/hib_conf.txt .
+2017-07-20 09:31:58 handle template templete/hib_conf.txt complete.
+2017-07-20 09:31:58 start handle template templete/pojo.txt .
+2017-07-20 09:31:58 unknown keyword or variable name "i".
+2017-07-20 09:31:58 handle template templete/pojo.txt complete.
+2017-07-20 09:31:59 start handle template templete/hib_conf.txt .
+2017-07-20 09:31:59 handle template templete/hib_conf.txt complete.
+2017-07-20 09:31:59 start handle template templete/service.txt .
+2017-07-20 09:31:59 handle template templete/service.txt complete.
+2017-07-20 09:31:59 start handle template templete/service.txt .
+2017-07-20 09:31:59 handle template templete/service.txt complete.
+2017-07-20 09:31:59 generate success.
+2017-07-20 09:32:43 start generate.
+2017-07-20 09:32:43 start handle template templete/cachemgr.txt .
+2017-07-20 09:32:43 handle template templete/cachemgr.txt complete.
+2017-07-20 09:32:44 start handle template templete/cachemgr.txt .
+2017-07-20 09:32:44 handle template templete/cachemgr.txt complete.
+2017-07-20 09:32:44 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:32:44 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:32:44 unknown keyword or variable name "dao_name".
+2017-07-20 09:32:44 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:32:44 unknown keyword or variable name "dao_name".
+2017-07-20 09:32:44 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:32:44 start handle template templete/pojo.txt .
+2017-07-20 09:32:44 unknown keyword or variable name "i".
+2017-07-20 09:32:44 handle template templete/pojo.txt complete.
+2017-07-20 09:32:44 start handle template templete/hib_conf.txt .
+2017-07-20 09:32:44 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:34:07 start generate.
+2017-07-20 09:34:08 start handle template templete/cachemgr.txt .
+2017-07-20 09:34:08 handle template templete/cachemgr.txt complete.
+2017-07-20 09:34:08 start handle template templete/cachemgr.txt .
+2017-07-20 09:34:08 handle template templete/cachemgr.txt complete.
+2017-07-20 09:34:08 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:34:08 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:34:08 unknown keyword or variable name "dao_name".
+2017-07-20 09:34:08 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:34:08 unknown keyword or variable name "dao_name".
+2017-07-20 09:34:08 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:34:08 start handle template templete/pojo.txt .
+2017-07-20 09:34:09 unknown keyword or variable name "i".
+2017-07-20 09:34:09 handle template templete/pojo.txt complete.
+2017-07-20 09:34:09 start handle template templete/hib_conf.txt .
+2017-07-20 09:34:09 handle template templete/hib_conf.txt complete.
+2017-07-20 09:34:09 start handle template templete/pojo.txt .
+2017-07-20 09:34:09 unknown keyword or variable name "i".
+2017-07-20 09:34:09 handle template templete/pojo.txt complete.
+2017-07-20 09:34:09 start handle template templete/hib_conf.txt .
+2017-07-20 09:34:09 handle template templete/hib_conf.txt complete.
+2017-07-20 09:34:09 start handle template templete/service.txt .
+2017-07-20 09:34:09 handle template templete/service.txt complete.
+2017-07-20 09:34:09 start handle template templete/service.txt .
+2017-07-20 09:34:09 handle template templete/service.txt complete.
+2017-07-20 09:34:09 generate success.
+2017-07-20 09:34:55 start generate.
+2017-07-20 09:34:55 start handle template templete/cachemgr.txt .
+2017-07-20 09:34:55 handle template templete/cachemgr.txt complete.
+2017-07-20 09:34:56 start handle template templete/cachemgr.txt .
+2017-07-20 09:34:56 handle template templete/cachemgr.txt complete.
+2017-07-20 09:34:56 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:34:56 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:34:56 unknown keyword or variable name "dao_name".
+2017-07-20 09:34:56 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:34:56 unknown keyword or variable name "dao_name".
+2017-07-20 09:34:56 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:34:56 start handle template templete/pojo.txt .
+2017-07-20 09:34:56 unknown keyword or variable name "i".
+2017-07-20 09:34:56 handle template templete/pojo.txt complete.
+2017-07-20 09:34:56 start handle template templete/hib_conf.txt .
+2017-07-20 09:34:57 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:35:24 start generate.
+2017-07-20 09:35:24 start handle template templete/cachemgr.txt .
+2017-07-20 09:35:24 handle template templete/cachemgr.txt complete.
+2017-07-20 09:35:24 start handle template templete/cachemgr.txt .
+2017-07-20 09:35:24 handle template templete/cachemgr.txt complete.
+2017-07-20 09:35:24 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:35:24 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:35:24 unknown keyword or variable name "dao_name".
+2017-07-20 09:35:24 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:35:24 unknown keyword or variable name "dao_name".
+2017-07-20 09:35:25 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:35:25 start handle template templete/pojo.txt .
+2017-07-20 09:35:25 unknown keyword or variable name "i".
+2017-07-20 09:35:25 handle template templete/pojo.txt complete.
+2017-07-20 09:35:25 start handle template templete/hib_conf.txt .
+2017-07-20 09:35:25 handle template templete/hib_conf.txt complete.
+2017-07-20 09:35:25 start handle template templete/pojo.txt .
+2017-07-20 09:35:25 unknown keyword or variable name "i".
+2017-07-20 09:35:25 handle template templete/pojo.txt complete.
+2017-07-20 09:35:25 start handle template templete/hib_conf.txt .
+2017-07-20 09:35:25 handle template templete/hib_conf.txt complete.
+2017-07-20 09:35:25 start handle template templete/service.txt .
+2017-07-20 09:35:26 handle template templete/service.txt complete.
+2017-07-20 09:35:26 start handle template templete/service.txt .
+2017-07-20 09:35:26 handle template templete/service.txt complete.
+2017-07-20 09:35:26 generate success.
+2017-07-20 09:36:06 start generate.
+2017-07-20 09:36:06 start handle template templete/cachemgr.txt .
+2017-07-20 09:36:06 handle template templete/cachemgr.txt complete.
+2017-07-20 09:36:06 start handle template templete/cachemgr.txt .
+2017-07-20 09:36:06 handle template templete/cachemgr.txt complete.
+2017-07-20 09:36:06 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:36:06 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:36:06 unknown keyword or variable name "dao_name".
+2017-07-20 09:36:07 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:36:07 unknown keyword or variable name "dao_name".
+2017-07-20 09:36:07 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:36:07 start handle template templete/pojo.txt .
+2017-07-20 09:36:07 unknown keyword or variable name "i".
+2017-07-20 09:36:07 handle template templete/pojo.txt complete.
+2017-07-20 09:36:07 start handle template templete/hib_conf.txt .
+2017-07-20 09:36:07 Square brackets quantity of template file "templete/hib_conf.txt" error when matches square brackets.
+2017-07-20 09:36:27 start generate.
+2017-07-20 09:36:27 start handle template templete/cachemgr.txt .
+2017-07-20 09:36:27 handle template templete/cachemgr.txt complete.
+2017-07-20 09:36:27 start handle template templete/cachemgr.txt .
+2017-07-20 09:36:27 handle template templete/cachemgr.txt complete.
+2017-07-20 09:36:27 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:36:27 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:36:28 unknown keyword or variable name "dao_name".
+2017-07-20 09:36:28 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:36:28 unknown keyword or variable name "dao_name".
+2017-07-20 09:36:28 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:36:28 start handle template templete/pojo.txt .
+2017-07-20 09:36:28 unknown keyword or variable name "i".
+2017-07-20 09:36:28 handle template templete/pojo.txt complete.
+2017-07-20 09:36:28 start handle template templete/hib_conf.txt .
+2017-07-20 09:36:28 handle template templete/hib_conf.txt complete.
+2017-07-20 09:36:28 start handle template templete/pojo.txt .
+2017-07-20 09:36:28 unknown keyword or variable name "i".
+2017-07-20 09:36:29 handle template templete/pojo.txt complete.
+2017-07-20 09:36:29 start handle template templete/hib_conf.txt .
+2017-07-20 09:36:29 handle template templete/hib_conf.txt complete.
+2017-07-20 09:36:29 start handle template templete/service.txt .
+2017-07-20 09:36:29 handle template templete/service.txt complete.
+2017-07-20 09:36:29 start handle template templete/service.txt .
+2017-07-20 09:36:29 handle template templete/service.txt complete.
+2017-07-20 09:36:29 generate success.
+2017-07-20 09:54:13 start generate.
+2017-07-20 09:54:13 start handle template templete/cachemgr.txt .
+2017-07-20 09:54:13 handle template templete/cachemgr.txt complete.
+2017-07-20 09:54:13 start handle template templete/cachemgr.txt .
+2017-07-20 09:54:14 handle template templete/cachemgr.txt complete.
+2017-07-20 09:54:14 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:54:14 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:54:14 unknown keyword or variable name "dao_name".
+2017-07-20 09:54:14 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:54:14 unknown keyword or variable name "dao_name".
+2017-07-20 09:54:14 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:54:14 start handle template templete/pojo.txt .
+2017-07-20 09:54:14 unknown keyword or variable name "i".
+2017-07-20 09:54:14 handle template templete/pojo.txt complete.
+2017-07-20 09:54:14 start handle template templete/hib_conf.txt .
+2017-07-20 09:54:15 handle template templete/hib_conf.txt complete.
+2017-07-20 09:54:15 start handle template templete/pojo.txt .
+2017-07-20 09:54:15 unknown keyword or variable name "i".
+2017-07-20 09:54:15 handle template templete/pojo.txt complete.
+2017-07-20 09:54:15 start handle template templete/hib_conf.txt .
+2017-07-20 09:54:15 handle template templete/hib_conf.txt complete.
+2017-07-20 09:54:15 start handle template templete/service.txt .
+2017-07-20 09:54:15 handle template templete/service.txt complete.
+2017-07-20 09:54:15 start handle template templete/service.txt .
+2017-07-20 09:54:15 handle template templete/service.txt complete.
+2017-07-20 09:54:15 generate success.
+2017-07-20 09:56:31 start generate.
+2017-07-20 09:56:32 start handle template templete/cachemgr.txt .
+2017-07-20 09:56:32 handle template templete/cachemgr.txt complete.
+2017-07-20 09:56:32 start handle template templete/cachemgr.txt .
+2017-07-20 09:56:32 handle template templete/cachemgr.txt complete.
+2017-07-20 09:56:32 start handle template templete/XtlCacheSync.txt .
+2017-07-20 09:56:32 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:56:32 unknown keyword or variable name "dao_name".
+2017-07-20 09:56:32 unknown keyword or variable name "dao_imp_class".
+2017-07-20 09:56:32 unknown keyword or variable name "dao_name".
+2017-07-20 09:56:32 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 09:56:32 start handle template templete/pojo.txt .
+2017-07-20 09:56:33 unknown keyword or variable name "i".
+2017-07-20 09:56:33 handle template templete/pojo.txt complete.
+2017-07-20 09:56:33 start handle template templete/hib_conf.txt .
+2017-07-20 09:56:33 handle template templete/hib_conf.txt complete.
+2017-07-20 09:56:33 start handle template templete/pojo.txt .
+2017-07-20 09:56:33 unknown keyword or variable name "i".
+2017-07-20 09:56:33 handle template templete/pojo.txt complete.
+2017-07-20 09:56:33 start handle template templete/hib_conf.txt .
+2017-07-20 09:56:33 handle template templete/hib_conf.txt complete.
+2017-07-20 09:56:33 start handle template templete/service.txt .
+2017-07-20 09:56:34 handle template templete/service.txt complete.
+2017-07-20 09:56:34 start handle template templete/service.txt .
+2017-07-20 09:56:34 handle template templete/service.txt complete.
+2017-07-20 09:56:34 generate success.
+2017-07-20 10:03:50 start generate.
+2017-07-20 10:03:51 start handle template templete/cachemgr.txt .
+2017-07-20 10:03:51 handle template templete/cachemgr.txt complete.
+2017-07-20 10:03:51 start handle template templete/cachemgr.txt .
+2017-07-20 10:03:51 handle template templete/cachemgr.txt complete.
+2017-07-20 10:03:51 start handle template templete/XtlCacheSync.txt .
+2017-07-20 10:03:51 unknown keyword or variable name "dao_imp_class".
+2017-07-20 10:03:51 unknown keyword or variable name "dao_name".
+2017-07-20 10:03:51 unknown keyword or variable name "dao_imp_class".
+2017-07-20 10:03:51 unknown keyword or variable name "dao_name".
+2017-07-20 10:03:51 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 10:03:52 start handle template templete/pojo.txt .
+2017-07-20 10:03:52 unknown keyword or variable name "i".
+2017-07-20 10:03:52 handle template templete/pojo.txt complete.
+2017-07-20 10:03:52 start handle template templete/hib_conf.txt .
+2017-07-20 10:03:52 handle template templete/hib_conf.txt complete.
+2017-07-20 10:03:52 start handle template templete/pojo.txt .
+2017-07-20 10:03:52 unknown keyword or variable name "i".
+2017-07-20 10:03:52 handle template templete/pojo.txt complete.
+2017-07-20 10:03:52 start handle template templete/hib_conf.txt .
+2017-07-20 10:03:53 handle template templete/hib_conf.txt complete.
+2017-07-20 10:03:53 start handle template templete/service.txt .
+2017-07-20 10:03:53 handle template templete/service.txt complete.
+2017-07-20 10:03:53 start handle template templete/service.txt .
+2017-07-20 10:21:06 start generate.
+2017-07-20 10:21:06 start handle template templete/cachemgr.txt .
+2017-07-20 10:29:35 start generate.
+2017-07-20 10:29:35 start handle template templete/cachemgr.txt .
+2017-07-20 10:29:36 handle template templete/cachemgr.txt complete.
+2017-07-20 10:29:36 start handle template templete/cachemgr.txt .
+2017-07-20 10:29:36 handle template templete/cachemgr.txt complete.
+2017-07-20 10:29:36 start handle template templete/cachemgr.txt .
+2017-07-20 10:29:36 handle template templete/cachemgr.txt complete.
+2017-07-20 10:29:36 start handle template templete/XtlCacheSync.txt .
+2017-07-20 10:29:36 unknown keyword or variable name "dao_imp_class".
+2017-07-20 10:29:36 unknown keyword or variable name "dao_name".
+2017-07-20 10:29:37 unknown keyword or variable name "dao_imp_class".
+2017-07-20 10:29:37 unknown keyword or variable name "dao_name".
+2017-07-20 10:29:37 handle template templete/XtlCacheSync.txt complete.
+2017-07-20 10:29:37 start handle template templete/pojo.txt .
+2017-07-20 10:29:37 unknown keyword or variable name "i".
+2017-07-20 10:29:37 handle template templete/pojo.txt complete.
+2017-07-20 10:29:37 start handle template templete/hib_conf.txt .
+2017-07-20 10:29:37 handle template templete/hib_conf.txt complete.
+2017-07-20 10:29:37 start handle template templete/pojo.txt .
+2017-07-20 10:29:37 unknown keyword or variable name "i".
+2017-07-20 10:29:38 handle template templete/pojo.txt complete.
+2017-07-20 10:29:38 start handle template templete/hib_conf.txt .
+2017-07-20 10:29:38 handle template templete/hib_conf.txt complete.
+2017-07-20 10:29:38 start handle template templete/pojo.txt .
+2017-07-20 10:29:38 unknown keyword or variable name "i".
+2017-07-20 10:29:38 handle template templete/pojo.txt complete.
+2017-07-20 10:29:38 start handle template templete/hib_conf.txt .
+2017-07-20 10:29:38 handle template templete/hib_conf.txt complete.
+2017-07-20 10:29:38 start handle template templete/pojo.txt .
+2017-07-20 10:29:38 unknown keyword or variable name "i".
+2017-07-20 10:29:38 handle template templete/pojo.txt complete.
+2017-07-20 10:29:39 start handle template templete/hib_conf.txt .
+2017-07-20 10:29:39 handle template templete/hib_conf.txt complete.
+2017-07-20 10:29:39 start handle template templete/service.txt .
+2017-07-20 10:29:39 handle template templete/service.txt complete.
+2017-07-20 10:29:39 start handle template templete/service.txt .

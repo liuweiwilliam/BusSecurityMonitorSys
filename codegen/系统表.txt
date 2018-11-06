@@ -1,0 +1,84 @@
+用户表：
+	id
+	uname
+	pwd
+	companyId
+	isAdmin
+	createTime
+	modifyTime
+	hdef1-10
+	dr
+	
+公交公司表：
+	id
+	name
+	parentId
+	createTime
+	modifyTime
+	hdef1-10
+	dr
+	
+公交线路表：
+	id
+	num
+	companyId
+	createTime
+	modifyTime
+	hdef1-10
+	dr
+	
+公交车辆表：
+	id
+	lineId
+	num
+	lat
+	lng
+	statusId
+	createTime
+	modifyTime
+	hdef1-10
+	dr
+	
+传感器表：
+	id
+	name
+	typeId
+	carId
+	statusId
+	createTime
+	modifyTime
+	hdef1-10
+	dr
+	
+传感器数据表
+	id
+	sensorId
+	statusId
+	vals
+	createTime
+	modifyTime
+	hdef1-10
+	dr
+	
+
+	
+字典表：
+	传感器状态
+	传感器数据状态
+	公交车状态
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

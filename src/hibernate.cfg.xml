@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	     <!-- c3p0配置 -->
+	    <property name="hibernate.connection.provider_class">org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property>
+	    <property name="hibernate.c3p0.max_size">30</property>
+	    <property name="hibernate.c3p0.min_size">5</property>
+	    <property name="hibernate.c3p0.timeout">60</property>
+	    
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://47.96.24.30:3306/bussecurity?autoReconnect=true</property>
+
+		<property name="connection.username">root</property>
+		<property name="connection.password">12345</property>
+		<property name="connection.useUnicode">true</property> 
+		<property name="connection.useSSL">true</property> 
+		<property name="connection.characterEncoding">utf-8</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		
+		<property name="hbm2ddl.auto">update</property>
+		<mapping resource="com/lzz/bussecurity/pojo/LzzID.hbm.xml"/>
+		
+		
+
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzDictionary.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzFileGroup.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzFileInfo.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzBus.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzBusLine.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzCompany.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzSensor.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzSensorData.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzUser.hbm.xml"/>
+
+<mapping resource="com/lzz/bussecurity/pojo/LzzCamera.hbm.xml"/>
+
+	</session-factory>
+</hibernate-configuration>

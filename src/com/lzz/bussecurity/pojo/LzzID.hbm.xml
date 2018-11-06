@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >  
+
+<hibernate-mapping package="com.lzz.bussecurity.pojo">
+	<class name="LzzID" table="lzzid">
+		<id name="id" column="id" type="string"></id>
+
+				<property name="nextid" type="string">
+					<column name="nextid" length="255"/>
+				</property>
+
+				<property name="createTime" type="string">
+					<column name="createTime" length="20"/>
+				</property>
+
+				<property name="modifyTime" type="string">
+					<column name="modifyTime" length="20"/>
+				</property>
+
+				<property name="dr" type="string">
+					<column name="dr" length="1"/>
+				</property>
+
+	</class>
+</hibernate-mapping>

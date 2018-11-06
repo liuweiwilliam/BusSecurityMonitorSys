@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+<struts>
+
+	<constant name= "struts.multipart.maxSize" value="11747904000"/>
+
+	<package name="order" extends="struts-default">
+		<!-- 文件上传下载action -->
+		<action name="upload" class="com.lzz.bussecurity.action.media.LzzFileUploadAction" method="upload">
+        </action>
+        <action name="download" class="com.lzz.bussecurity.action.media.LzzFileUploadAction" method="download">
+            <result name="success" type="stream">
+                <param name="contentDisposition">attachment;filename="${fileName}"</param>
+                <param name="inputName">downloadFile</param>
+                <param name="contentType">application/octet-stream</param>
+            </result>
+        </action>
+        
+		<action name="login" class="com.lzz.bussecurity.action.LzzLogin" method="login"></action>
+		<action name="urlCheck" class="com.lzz.bussecurity.action.LzzUrlCheck" method="urlCheck"></action>
+		<action name="getUserMgrBusList" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="getUserMgrBusList"></action>
+		<action name="getUserMgrBuses" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="getUserMgrBuses"></action>
+		<action name="getBusPos" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="getBusPos"></action>
+		<action name="setBusAlarmIgnore" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="setBusAlarmIgnore"></action>
+		<action name="getBusAlarmIgnore" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="getBusAlarmIgnore"></action>
+		<action name="getAlarmedBuses" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="getAlarmedBuses"></action>
+		<action name="getBusAlarmMsg" class="com.lzz.bussecurity.action.bus.LzzBusAction" method="getBusAlarmMsg"></action>
+		
+		<action name="getLogList" class="com.lzz.bussecurity.action.log.LzzLogAction" method="getSensorDataList"></action>
+		<action name="setPrevAlarmHandled" class="com.lzz.bussecurity.action.log.LzzLogAction" method="setPrevAlarmHandled"></action>
+
+		<action name="addUserOpr" class="com.lzz.bussecurity.action.LzzUserOprAction" method="addUserOpr"></action>
+		<action name="getUserOpr" class="com.lzz.bussecurity.action.LzzUserOprAction" method="getUserOpr"></action>
+
+
+<action name="addOrUpdateLzzDictionary" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzDictionary"></action>
+<action name="removeSingleLzzDictionary" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzDictionary"></action>
+<action name="getAllLzzDictionary" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzDictionary"></action>
+<action name="getSingleLzzDictionary" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzDictionary"></action>
+
+<action name="addOrUpdateLzzFileGroup" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzFileGroup"></action>
+<action name="removeSingleLzzFileGroup" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzFileGroup"></action>
+<action name="getAllLzzFileGroup" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzFileGroup"></action>
+<action name="getSingleLzzFileGroup" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzFileGroup"></action>
+
+<action name="addOrUpdateLzzFileInfo" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzFileInfo"></action>
+<action name="removeSingleLzzFileInfo" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzFileInfo"></action>
+<action name="getAllLzzFileInfo" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzFileInfo"></action>
+<action name="getSingleLzzFileInfo" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzFileInfo"></action>
+
+<action name="addOrUpdateLzzBus" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzBus"></action>
+<action name="removeSingleLzzBus" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzBus"></action>
+<action name="getAllLzzBus" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzBus"></action>
+<action name="getSingleLzzBus" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzBus"></action>
+
+<action name="addOrUpdateLzzBusLine" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzBusLine"></action>
+<action name="removeSingleLzzBusLine" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzBusLine"></action>
+<action name="getAllLzzBusLine" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzBusLine"></action>
+<action name="getSingleLzzBusLine" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzBusLine"></action>
+
+<action name="addOrUpdateLzzCompany" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzCompany"></action>
+<action name="removeSingleLzzCompany" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzCompany"></action>
+<action name="getAllLzzCompany" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzCompany"></action>
+<action name="getSingleLzzCompany" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzCompany"></action>
+
+<action name="addOrUpdateLzzSensor" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzSensor"></action>
+<action name="removeSingleLzzSensor" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzSensor"></action>
+<action name="getAllLzzSensor" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzSensor"></action>
+<action name="getSingleLzzSensor" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzSensor"></action>
+
+<action name="addOrUpdateLzzSensorData" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzSensorData"></action>
+<action name="removeSingleLzzSensorData" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzSensorData"></action>
+<action name="getAllLzzSensorData" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzSensorData"></action>
+<action name="getSingleLzzSensorData" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzSensorData"></action>
+
+<action name="addOrUpdateLzzUser" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzUser"></action>
+<action name="removeSingleLzzUser" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzUser"></action>
+<action name="getAllLzzUser" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzUser"></action>
+<action name="getSingleLzzUser" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzUser"></action>
+
+<action name="addOrUpdateLzzCamera" class="com.lzz.bussecurity.action.entering.LzzEntering" method="addOrUpdateLzzCamera"></action>
+<action name="removeSingleLzzCamera" class="com.lzz.bussecurity.action.entering.LzzEntering" method="removeSingleLzzCamera"></action>
+<action name="getAllLzzCamera" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getAllLzzCamera"></action>
+<action name="getSingleLzzCamera" class="com.lzz.bussecurity.action.entering.LzzEntering" method="getSingleLzzCamera"></action>
+
+
+  
+	</package>		
+</struts>
+	

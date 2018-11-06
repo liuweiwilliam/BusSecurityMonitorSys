@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html>
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>Hello, World</title>  
+<style type="text/css">  
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{height:100%} 
+
+.anchorBL{
+	display: none;
+}
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bYxOvWletLBlBC2psSlwIXfnYL8pHr6w">
+//v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+</script>
+</head>  
+ 
+<body>  
+<div id="container"></div> 
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/map.js"></script>
+<script type="text/javascript" src="./js/basic.js"></script>
+<script type="text/javascript" src="./js/json2.js"></script>
+<script type="text/javascript">
+	var session_id = getUrlParameter("sessionId");
+	var url = "getUserMgrBuses.action?sessionId=" + session_id;
+	function init(){
+		url += "&sign=" + Date.parse(new Date());
+		xtlRawGet(url, drawBus);
+		setTimeout("init()", 2000)
+	}
+	
+	function drawBus(data){
+		for(var i=0; i<data.length; i++){
+			var bus = data[i];
+			removeOverLay(bus.id);
+			if(bus.status=="1"){
+				addAlarmBus(bus.id, bus.carNum, bus.lng, bus.lat);
+			}else{
+				addNormalBus(bus.id, bus.carNum, bus.lng, bus.lat);
+			}
+		}
+	}
+	
+	init();
+</script>
+</body>  
+</html>

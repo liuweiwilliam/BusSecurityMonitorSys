@@ -1,0 +1,13 @@
+文件名,xml/LzzCompanyService.xml,,
+全局变量,project_name,bussecurity,
+全局变量,service_name,LzzCompanyService,
+全局变量,dao_imp_class,XtlDaoImp,
+全局变量,service_pack,service,
+全局变量,dao_name,LzzDao,
+全局变量,cache_name,LzzCompanyCacheMgr,
+表,service_list,,
+,class_name,,
+,LzzCompany,,
+表,one_par_list,,
+,class_name,attr_name1,attr_type1
+,LzzCompany,parentId,String

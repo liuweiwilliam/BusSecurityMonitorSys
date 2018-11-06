@@ -1,0 +1,59 @@
+package com.lzz.bussecurity.listener;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import com.lzz.bussecurity.thread.LzzSocketHandler;
+
+public class LzzHttpListener {
+	private static int port = 8889;
+	private static ServerSocket serverSocket;
+	
+	public static void startListen(){
+		try {
+			serverSocket = new ServerSocket(port, 10);
+			System.out.println("TCP监听服务启动成功！");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("TCP监听服务启动失败！！！！！！！！！！！！！！！");
+			e.printStackTrace();
+			return;
+		}
+		int count=0;
+		while(true){
+			Socket socket = null;
+			try {
+				socket = serverSocket.accept();
+
+				Reader reader = new InputStreamReader(socket.getInputStream());  
+				BufferedReader br=new BufferedReader(reader);  
+		        String a = null;  
+		        while(!((a=br.readLine()).equals(""))){  
+		            System.out.println(a);  
+		        }
+		        
+		        PrintWriter out = new PrintWriter(socket.getOutputStream()); 
+		        //返回一个状态行  
+		        out.println("HTTP/1.0 200 OK");   
+		        //返回一个首部  
+		        out.println("Content-Type:image/png;charset=utf-8");    
+		        // 根据 HTTP 协议, 空行将结束头信息    
+		        out.println();  
+		        File image_file = new File("");
+		        out.close(); 
+                count++;//统计客户端的数量
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

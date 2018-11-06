@@ -1,0 +1,8 @@
+文件名,xml/LzzFileCacheMgr.xml,
+全局变量,project_name,bussecurity
+全局变量,cache_mgr_name,LzzFileCacheMgr
+全局变量,cache_mgr_pack,cachemgr
+表,pojo_list,pojo列表
+,class_name,
+,LzzFileInfo,
+,LzzFileGroup,
