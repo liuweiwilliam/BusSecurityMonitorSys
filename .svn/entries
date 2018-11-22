@@ -1,0 +1,64 @@
+8
+
+dir
+14853
+svn://47.96.24.30/BusSecurityMonitorSys
+svn://47.96.24.30
+
+
+
+2018-07-24T01:35:14.141505Z
+14761
+liuwei
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10cc15d7-ed91-4ad7-ac41-a70f3bde075a
+
+build
+dir
+
+.classpath
+file
+14876
+
+
+
+2018-07-31T10:20:02.940475Z
+60f8a461ac57a8b5a72940fbf95eb570
+2018-08-01T10:58:27.955294Z
+14876
+liuwei
+
+.project
+file
+
+
+
+
+2018-07-31T10:17:49.522439Z
+dab6ed847e270d82b9af02e316507046
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+
+src
+dir
+
+WebContent
+dir
+
+.settings
+dir
+

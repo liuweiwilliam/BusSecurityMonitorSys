@@ -1,0 +1,75 @@
+[export]src/com/xtl/[project_name]/[dao_imp_pack_name]/[dao_imp_name].java
+package com.xtl.[project_name].[dao_imp_pack_name];
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.CacheMode;
+import org.hibernate.Query;
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
+import org.hibernate.Session;
+
+import net.sf.json.JSONObject;
+import com.xtl.[project_name].basedao.[dao_name];
+[loop pojo_list]	
+import com.xtl.[project_name].pojo.[pojo_list.class_name];
+[endloop pojo_list]
+import com.xtl.[project_name].utils.*;
+
+public class [dao_imp_name] implements [dao_name] {
+	private Session session;
+
+	public Session getSession() {
+		return session;
+	}
+
+	public void setSession(Session session) {
+		this.session = session;
+	}
+
+
+[loop pojo_list]	
+	@Override
+	public void save[pojo_list.class_name](Object obj) {
+	  if(XtlProperties.getDbfalg().equals("false")) return;
+		session.save(obj);
+	}
+        @Override
+	public void update[pojo_list.class_name](Object obj) {
+	if(XtlProperties.getDbfalg().equals("false")) return;
+		session.update(obj);
+		
+	}
+	@Override
+	public void del[pojo_list.class_name]([pojo_list.class_name] obj2) {
+		if(XtlProperties.getDbfalg().equals("false")) return;
+		session.delete(obj2);
+	}
+
+	@Override
+	public [pojo_list.class_name] get[pojo_list.class_name](String id) {
+		System.out.println("get single [pojo_list.class_name], id is : " + id);
+		String hql = "from [pojo_list.class_name] where id=" + id;
+		Query query = session.createQuery(hql);
+		System.out.println(query.list().size());
+		assert(query.list().size() == 1):"get single [pojo_list.class_name] error";
+		return ([pojo_list.class_name]) query.list().get(0);
+	}
+	
+	@Override
+	public List<[pojo_list.class_name]> getAll[pojo_list.class_name]s() {
+		System.out.println("get all [pojo_list.class_name]");
+		String hql = "from [pojo_list.class_name]";
+		Query query = session.createQuery(hql);
+		System.out.println(query.list().size());
+		return (List<[pojo_list.class_name]>)(query.list());		
+	}
+	
+[endloop pojo_list]	
+	
+}

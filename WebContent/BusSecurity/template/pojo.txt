@@ -1,0 +1,61 @@
+[export]src/com/lzz/bussecurity/pojo/[class_name].java
+
+package com.lzz.bussecurity.pojo;
+
+import com.lzz.bussecurity.mgr.LzzIDMgr;
+
+/*
+[loop field_list]
+[field_list.fieldname]     [field_list.fieldmeaning]
+[endloop field_list]
+*/
+public class [class_name] {
+
+[loop field_list]
+[if field_list.fieldname==dr]
+	private [field_list.datatype] [field_list.fieldname] = "0";
+[endif]
+[if field_list.fieldname!=dr]
+	private [field_list.datatype] [field_list.fieldname] = "";
+[endif]
+[endloop field_list]
+	
+	public [class_name](){
+		this.id = LzzIDMgr.self().getID();
+	}
+	
+	public [class_name](boolean need_id){
+		if(need_id){
+			this.id = LzzIDMgr.self().getID();
+		}
+	}
+	
+	public [class_name]([class_name] [object_name]){
+[loop field_list]
+	    [field_list.fieldname] = [object_name].get[field_list.fielduname]();
+[endloop field_list]
+	}
+
+[loop field_list]
+	public [field_list.datatype] get[field_list.fielduname]() {
+	    return [field_list.fieldname];
+	}
+	public void set[field_list.fielduname]([field_list.datatype] [field_list.fieldname]) {
+	    this.[field_list.fieldname] = [field_list.fieldname];
+	}
+[endloop field_list]
+
+	public [class_name] clone(){
+		[class_name] rslt = new [class_name](false);
+[loop field_list]
+		rslt.[field_list.fieldname] = this.get[field_list.fielduname]();
+[endloop field_list]
+		return rslt;
+	}
+	public void constructWith([class_name] pro) {
+		// TODO Auto-generated method stub
+[loop field_list]
+		this.[field_list.fieldname]  = pro.get[field_list.fielduname] ();
+[endloop field_list]
+	}
+}

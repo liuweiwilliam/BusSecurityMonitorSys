@@ -1,0 +1,17 @@
+文件名,xml/LzzBusService.xml,,
+全局变量,project_name,bussecurity,
+全局变量,service_name,LzzBusService,
+全局变量,dao_imp_class,XtlDaoImp,
+全局变量,service_pack,service,
+全局变量,dao_name,LzzDao,
+全局变量,cache_name,LzzBusCacheMgr,
+表,service_list,,
+,class_name,,
+,LzzBus,,
+表,one_par_list,,
+,class_name,attr_name1,attr_type1
+,LzzBus,lineId,String
+,LzzBus,statusId,String
+表,one_par_single,,
+,class_name,attr_name1,attr_type1
+,LzzBus,carNum,String

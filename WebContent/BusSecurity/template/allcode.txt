@@ -1,0 +1,436 @@
+[export]src/com/xtl/[project_name]/allcode.java
+package com.xtl.allcode;
+
+//code of cachemgr 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+
+import com.xtl.[project_name].basedao.[dao_name];
+import com.xtl.[project_name].daoimp.[dao_imp_class];
+[loop sefactory_list]
+import com.xtl.[project_name].sefactory.[sefactory_list.class_name];
+[endloop sefactory_list]
+[loop pojo_list]	
+import com.xtl.[project_name].pojo.[pojo_list.class_name];
+[endloop pojo_list]
+
+public class [cache_mgr_name]{
+
+	private Session session;
+	private [dao_name] dao;
+	
+[loop pojo_list]	
+	private List<[pojo_list.class_name]> m[pojo_list.class_name]s;
+	private boolean m[pojo_list.class_name]sLoaded;
+	private Hashtable<String,[pojo_list.class_name]> m[pojo_list.class_name]Hash;
+[endloop pojo_list]
+
+	// Singleton functions ( construction is private)
+	private final static [cache_mgr_name] singleton = new [cache_mgr_name] ();	
+	public static [cache_mgr_name] self(){
+		return singleton;
+	}
+	public [cache_mgr_name] getSelf(){return self();}
+
+	private [cache_mgr_name] (){
+		dao = new [dao_imp_class]();
+
+[loop pojo_list]	
+		m[pojo_list.class_name]s = new ArrayList<[pojo_list.class_name]>();
+		m[pojo_list.class_name]sLoaded = false;
+		m[pojo_list.class_name]Hash = new Hashtable<String,[pojo_list.class_name]>();
+[endloop pojo_list]
+
+}
+	
+[loop pojo_list]	
+	private boolean load[pojo_list.class_name]s(){
+
+		if(!m[pojo_list.class_name]sLoaded){
+			session = XtlSeFactoryLocal.currentSession();
+			dao.setSession(session);
+
+			//Transaction ts = session.beginTransaction();
+			m[pojo_list.class_name]s = dao.getAll[pojo_list.class_name]s();
+			//ts.commit();
+	                //XtlSeFactoryLocal.closeSession();
+			for(int i = 0;i < m[pojo_list.class_name]s.size();i++){
+				m[pojo_list.class_name]Hash.put(m[pojo_list.class_name]s.get(i).getId(), m[pojo_list.class_name]s.get(i));
+			}
+			m[pojo_list.class_name]sLoaded = true;
+		}
+		return true;
+	}
+[endloop pojo_list]
+
+	
+	public boolean loadAllDB(){
+[loop pojo_list]	
+		load[pojo_list.class_name]s();
+[endloop pojo_list]
+		return true;
+	}
+
+	public boolean clearCache(){
+[loop pojo_list]	
+		m[pojo_list.class_name]s.clear();
+		m[pojo_list.class_name]sLoaded = false;
+		m[pojo_list.class_name]Hash.clear();
+[endloop pojo_list]
+
+		return true;
+	}
+	
+	public boolean reloadCache(){
+		clearCache();
+		loadAllDB();
+		return true;
+	}	
+	
+[loop pojo_list]	
+	// save new object(if you want to change an exist object, please call other functions.)
+	public void save[pojo_list.class_name](Object obj) {
+		load[pojo_list.class_name]s();
+
+		session = XtlSeFactoryLocal.currentSession();
+		dao.setSession(session);
+		
+		//Transaction ts = session.beginTransaction();
+		dao.save[pojo_list.class_name](obj);
+		//ts.commit();
+                //XtlSeFactoryLocal.closeSession();
+        [pojo_list.class_name] obj2 = ([pojo_list.class_name])obj;
+        m[pojo_list.class_name]s.add(obj2);
+		m[pojo_list.class_name]Hash.put(obj2.getId(), obj2);
+        
+	}
+	   //update new object
+	
+		public void update[pojo_list.class_name](Object obj) {
+		 
+			load[pojo_list.class_name]s();
+			
+			for(int i = 0; i < m[pojo_list.class_name]s.size(); i++){
+				if(m[pojo_list.class_name]s.get(i).getId() == (([pojo_list.class_name])obj).getId()){
+						m[pojo_list.class_name]s.set(i, ([pojo_list.class_name]) obj);
+				}
+			}
+			m[pojo_list.class_name]Hash.remove((([pojo_list.class_name])obj).getId());
+			m[pojo_list.class_name]Hash.put((([pojo_list.class_name])obj).getId(), ([pojo_list.class_name])obj);
+			
+			session = XtlSeFactoryLocal.currentSession();
+			dao.setSession(session);
+			
+			//Transaction ts = session.beginTransaction();
+			dao.update[pojo_list.class_name](obj);
+			//ts.commit();
+			//XtlSeFactoryLocal.closeSession();
+		}
+	// delete new object
+public void del[pojo_list.class_name](Object obj) {
+		load[pojo_list.class_name]s();
+
+		[pojo_list.class_name] obj2 = ([pojo_list.class_name])obj;
+		
+		session = XtlSeFactoryLocal.currentSession();
+		dao.setSession(session);
+		
+		dao.del[pojo_list.class_name](obj2);
+
+		//XtlSeFactoryLocal.closeSession();
+		
+		int index=0;
+		for([pojo_list.class_name] msg : m[pojo_list.class_name]s){
+			if(msg.getId().equals(obj2.getId())){
+				m[pojo_list.class_name]s.remove(index);
+			}
+			index++;
+		}
+		m[pojo_list.class_name]Hash.remove(obj2.getId());
+	}
+
+	public [pojo_list.class_name] getSingle[pojo_list.class_name](String id) {
+		load[pojo_list.class_name]s();
+
+		[pojo_list.class_name] cur_obj = m[pojo_list.class_name]Hash.get(id);
+        return cur_obj;
+	}
+	
+	public List<[pojo_list.class_name]> getAll[pojo_list.class_name]() {
+		load[pojo_list.class_name]s();
+		
+		List<[pojo_list.class_name]> objects = new ArrayList<[pojo_list.class_name]>();
+		//[pojo_list.class_name] cur_obj;
+		for(int i = 0;i < m[pojo_list.class_name]s.size(); i++)
+		{
+			objects.add(m[pojo_list.class_name]s.get(i).clone());
+		}
+        return objects;
+	}
+
+[endloop pojo_list]
+
+[loop get_special_list]	
+	public List<[get_special_list.class_name]> get[get_special_list.class_name]ListBy[get_special_list.attr_uname]([get_special_list.attr_type] attr) {
+		load[get_special_list.class_name]s();
+		
+		List<[get_special_list.class_name]> objects = new ArrayList<[get_special_list.class_name]>();
+		[get_special_list.class_name] cur_obj;
+		for(int i = 0;i < m[get_special_list.class_name]s.size(); i++)
+		{
+			cur_obj = m[get_special_list.class_name]s.get(i);
+			if(cur_obj.get[get_special_list.attr_uname]().equals(attr))
+			{
+				objects.add(cur_obj.clone());
+			}
+		}
+        return objects;
+	}
+[endloop get_special_list]	
+	
+}
+//code of dao
+
+package com.xtl.[project_name].basedao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+[loop pojo_list]	
+import com.xtl.[project_name].pojo.[pojo_list.class_name];
+[endloop pojo_list]
+
+public interface [dao_name] {
+
+	public void setSession(Session session);
+
+[loop pojo_list]	
+	public void save[pojo_list.class_name](Object obj);
+
+	public void del[pojo_list.class_name]([pojo_list.class_name] obj2);
+
+	pubilc void update[pojo_list.class_name](Object obj);
+
+	public [pojo_list.class_name] get[pojo_list.class_name](String id);
+	
+	public List<[pojo_list.class_name]> getAll[pojo_list.class_name]s();
+	
+[endloop pojo_list]	
+}
+
+//daoimp
+
+package com.xtl.[project_name].[dao_imp_pack_name];
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.CacheMode;
+import org.hibernate.Query;
+import org.hibernate.ScrollMode;
+import org.hibernate.ScrollableResults;
+import org.hibernate.Session;
+
+import net.sf.json.JSONObject;
+import com.xtl.[project_name].basedao.[dao_name];
+[loop pojo_list]	
+import com.xtl.[project_name].pojo.[pojo_list.class_name];
+[endloop pojo_list]
+import com.xtl.[project_name].utils.*;
+
+public class [dao_imp_name] implements [dao_name] {
+	private Session session;
+
+	public Session getSession() {
+		return session;
+	}
+
+	public void setSession(Session session) {
+		this.session = session;
+	}
+
+
+[loop pojo_list]	
+	@Override
+	public void save[pojo_list.class_name](Object obj) {
+	  if(XtlProperties.getDbfalg().equals("false")) return;
+		session.save(obj);
+	}
+        @Override
+	public void update[pojo_list.class_name](Object obj) {
+	if(XtlProperties.getDbfalg().equals("false")) return;
+		session.update(obj);
+		
+	}
+	@Override
+	public void del[pojo_list.class_name]([pojo_list.class_name] obj2) {
+		if(XtlProperties.getDbfalg().equals("false")) return;
+		session.delete(obj2);
+	}
+
+	@Override
+	public [pojo_list.class_name] get[pojo_list.class_name](String id) {
+		System.out.println("get single [pojo_list.class_name], id is : " + id);
+		String hql = "from [pojo_list.class_name] where id=" + id;
+		Query query = session.createQuery(hql);
+		System.out.println(query.list().size());
+		assert(query.list().size() == 1):"get single [pojo_list.class_name] error";
+		return ([pojo_list.class_name]) query.list().get(0);
+	}
+	
+	@Override
+	public List<[pojo_list.class_name]> getAll[pojo_list.class_name]s() {
+		System.out.println("get all [pojo_list.class_name]");
+		String hql = "from [pojo_list.class_name]";
+		Query query = session.createQuery(hql);
+		System.out.println(query.list().size());
+		return (List<[pojo_list.class_name]>)(query.list());		
+	}
+	
+[endloop pojo_list]	
+	
+}
+//hib_conf
+[export]src/com/xtl/[project_name]/pojo/[class_name].hbm.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >  
+
+<hibernate-mapping package="xc.com.[project_name].pojo">
+	<class name="[class_name]" table="[table_name]">
+		<id name="id" column="id" type="java.lang.String">
+		<generator class="native"/>
+		</id>
+		[loop field_list]
+				<property name="[field_list.fieldname]" column="[field_list.fieldname]" type="[field_list.hbmtype]" not-null="[field_list.dbnull]"/>
+		[endloop field_list]
+	</class>
+</hibernate-mapping>
+//pojo
+
+package com.xtl.[project_name].pojo;
+import java.util.Date; 
+public class [class_name] {
+
+[loop field_list]	
+	private [field_list.datatype] [field_list.fieldname];
+[endloop field_list]
+	
+	public [class_name](){};
+	
+	public [class_name]([class_name] [object_name]){
+[loop field_list]
+	    [field_list.fieldname] = [object_name].get[field_list.fielduname]();
+[endloop field_list]
+	}
+
+[loop field_list]
+	public [field_list.datatype] get[field_list.fielduname]() {
+	    return [field_list.fieldname];
+	}
+	public void set[field_list.fielduname]([field_list.datatype] [field_list.fieldname]) {
+	    this.[field_list.fieldname] = [field_list.fieldname];
+	}
+[endloop field_list]
+
+	public [class_name] clone(){
+		[class_name] rslt = new [class_name]();
+[loop field_list]
+		rslt.[field_list.fieldname] = this.get[field_list.fielduname]();
+[endloop field_list]
+		return rslt;
+	}
+	public void constructWith([class_name] pro) {
+		// TODO Auto-generated method stub
+[loop field_list]
+		this.[field_list.fieldname]   = pro.get[field_list.fielduname] ();
+[endloop field_list]
+	}
+}
+
+//service
+
+package com.xtl.[project_name].[service_pack];
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+
+import com.xtl.[project_name].basedao.[dao_name];
+import com.xtl.[project_name].daoimp.[dao_imp_class];
+[loop service_list]
+import com.xtl.[project_name].pojo.[service_list.class_name];
+[endloop service_list]
+import com.xtl.[project_name].cachemgr.[cache_name];
+
+
+public class [service_name]{
+
+	// Singleton functions ( construction is private)
+	private final static [service_name] singleton = new [service_name] ();	
+	public static [service_name] self(){
+		return singleton;
+	}
+	public [service_name] getSelf(){return self();}
+
+	private [service_name] (){
+	}
+[loop service_list]	
+	// save new object(if you want to change an exist object, please call other functions.)
+	public void save[service_list.class_name](Object obj) {
+		[cache_name].self().save[service_list.class_name](obj);
+	}
+        // delete new object(if you want to change an exist object, please call other functions.)
+	public void del[service_list.class_name](Object obj) {
+		[cache_name].self().del[service_list.class_name](obj);
+	}
+	// update new object(if you want to change an exist object, please call other functions.)
+	public void update[service_list.class_name](Object obj) {
+		[cache_name].self().update[service_list.class_name](obj);
+	}
+	public [service_list.class_name] getSingle[service_list.class_name](String id) {
+		return [cache_name].self().getSingle[service_list.class_name](id);
+	}
+	
+	public List<[service_list.class_name]> getAll[service_list.class_name]() {
+		return [cache_name].self().getAll[service_list.class_name]();
+	}
+[endloop service_list]
+
+[loop get_special_list]	
+	public List<[get_special_list.class_name]> get[get_special_list.class_name]ListBy[get_special_list.attr_uname]([get_special_list.attr_type] attr) {
+		
+		List<[get_special_list.class_name]> objects = new ArrayList<[get_special_list.class_name]>();
+		objects = [cache_name].self().get[get_special_list.class_name]ListBy[get_special_list.attr_uname](attr);
+        return objects;
+	}
+[endloop get_special_list]	
+	
+}
+

@@ -1,0 +1,25 @@
+[export]src/com/lzz/bussecurity/pojo/[class_name].hbm.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >  
+
+<hibernate-mapping package="com.lzz.bussecurity.pojo">
+	<class name="[class_name]" table="[table_name]">
+		<id name="id" column="id" type="string"></id>
+[loop field_list]
+[if field_list.fieldname!=id]
+[if field_list.dblen==0]
+				<property name="[field_list.fieldname]" type="[field_list.hbmtype]">
+					<column name="[field_list.fieldname]"/>
+				</property>
+[endif]
+[if field_list.dblen!=0]
+				<property name="[field_list.fieldname]" type="[field_list.hbmtype]">
+					<column name="[field_list.fieldname]" length="[field_list.dblen]"/>
+				</property>
+[endif]
+[endif]
+[endloop field_list]
+	</class>
+</hibernate-mapping>

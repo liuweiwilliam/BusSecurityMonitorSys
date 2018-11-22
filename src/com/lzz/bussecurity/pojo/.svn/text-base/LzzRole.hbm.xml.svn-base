@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >  
+
+<hibernate-mapping package="com.lzz.bussecurity.pojo">
+	<class name="LzzRole" table="lzzrole">
+		<id name="id" column="id" type="string"></id>
+
+				<property name="name" type="string">
+					<column name="name" length="20"/>
+				</property>
+
+				<property name="isDefaultRole" type="string">
+					<column name="isDefaultRole" length="1"/>
+				</property>
+
+				<property name="createTime" type="string">
+					<column name="createTime" length="20"/>
+				</property>
+
+				<property name="modifyTime" type="string">
+					<column name="modifyTime" length="20"/>
+				</property>
+
+				<property name="def1" type="text">
+					<column name="def1" length="500"/>
+				</property>
+
+				<property name="def2" type="text">
+					<column name="def2" length="500"/>
+				</property>
+
+				<property name="def3" type="text">
+					<column name="def3" length="500"/>
+				</property>
+
+				<property name="def4" type="text">
+					<column name="def4" length="500"/>
+				</property>
+
+				<property name="def5" type="text">
+					<column name="def5" length="500"/>
+				</property>
+
+				<property name="def6" type="text">
+					<column name="def6" length="500"/>
+				</property>
+
+				<property name="def7" type="text">
+					<column name="def7" length="500"/>
+				</property>
+
+				<property name="def8" type="text">
+					<column name="def8" length="500"/>
+				</property>
+
+				<property name="def9" type="text">
+					<column name="def9" length="500"/>
+				</property>
+
+				<property name="def10" type="text">
+					<column name="def10" length="500"/>
+				</property>
+
+				<property name="dr" type="string">
+					<column name="dr" length="1"/>
+				</property>
+
+	</class>
+</hibernate-mapping>

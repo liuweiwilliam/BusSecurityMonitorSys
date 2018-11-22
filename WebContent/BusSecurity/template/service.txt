@@ -1,0 +1,299 @@
+[export]src/com/lzz/bussecurity/service/[service_name].java
+package com.lzz.bussecurity.service;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import com.lzz.bussecurity.utils.LzzDateUtil;
+
+import com.lzz.bussecurity.cachemgr.*;
+[loop service_list]
+import com.lzz.bussecurity.pojo.[service_list.class_name];
+[endloop service_list]
+
+public class [service_name]{
+
+	// Singleton functions ( construction is private)
+	private static [service_name] mSelf;	
+	public static [service_name] self(){
+		if(null==mSelf) mSelf = new [service_name]();
+		
+		return mSelf;
+	}
+
+	private [service_name] (){
+	}
+	
+[loop service_list]	
+	// save new object(if you want to change an exist object, please call other functions.)
+	public void save[service_list.class_name](Object obj) {
+		(([service_list.class_name])obj).setCreateTime(LzzDateUtil.getNow("s"));
+		(([service_list.class_name])obj).setModifyTime(LzzDateUtil.getNow("s"));
+		[cache_name].self().save[service_list.class_name](obj);
+	}
+    // delete new object(if you want to change an exist object, please call other functions.)
+	public void del[service_list.class_name](Object obj) {
+		[cache_name].self().del[service_list.class_name](obj);
+	}
+	// delete new object(if you want to change an exist object, please call other functions.)
+	public void del[service_list.class_name]ById(String id) {
+		[service_list.class_name] obj = new [service_list.class_name]();
+		obj.setId(id);
+		del[service_list.class_name](obj);
+	}
+	// update new object(if you want to change an exist object, please call other functions.)
+	public void update[service_list.class_name](Object obj) {
+		(([service_list.class_name])obj).setModifyTime(LzzDateUtil.getNow("s"));
+		[cache_name].self().update[service_list.class_name](obj);
+	}
+	
+	public void saveOrUpdate[service_list.class_name](Object obj){
+		String id = (([service_list.class_name])obj).getId();
+		[service_list.class_name] obj_check = get[service_list.class_name]ById(id);
+		if(null==obj_check){
+			save[service_list.class_name](obj);
+		}else{
+			update[service_list.class_name](obj);
+		}
+	}
+	
+	private List<[service_list.class_name]> getAll[service_list.class_name]() {
+		return [cache_name].self().getAll[service_list.class_name]();
+	}
+	
+	public List<[service_list.class_name]> getAllValid[service_list.class_name]() {
+		List<[service_list.class_name]> array_all = getAll[service_list.class_name]();
+		List<[service_list.class_name]> rslt = new ArrayList<[service_list.class_name]>();
+		
+		for(int i=0;i<array_all.size();i++){
+			if(null==array_all.get(i).getDr()
+				|| !array_all.get(i).getDr().equals("1")){
+				rslt.add(array_all.get(i));
+			}
+		}
+		
+		return rslt;
+	}
+	
+	public List<[service_list.class_name]> getAll[service_list.class_name]IgnoreDr() {
+		return getAll[service_list.class_name]();
+	}
+	
+	public [service_list.class_name] get[service_list.class_name]ById(String id){
+		return [cache_name].self().get[service_list.class_name]ById(id);
+	}
+[endloop service_list]
+
+[loop fuzzy_list]
+    //fuzzy search
+	public List<[fuzzy_list.class_name]> fuzzySearch[fuzzy_list.class_name]By[fuzzy_list.attr_uname](String s){
+		List<[fuzzy_list.class_name]> orig = getAll[fuzzy_list.class_name]();
+		List<[fuzzy_list.class_name]> rslt = new ArrayList<[fuzzy_list.class_name]>();
+		for(int i=0;i<orig.size();i++){
+			if(orig.get(i).get[fuzzy_list.attr_uname]()!=null
+				&& orig.get(i).get[fuzzy_list.attr_uname]().contains(s)){
+				rslt.add(orig.get(i));
+			}
+		}
+		return rslt;
+	}
+[endloop fuzzy_list]
+
+[loop one_par_single]
+	public [one_par_single.class_name] get[one_par_single.class_name]By[one_par_single.attr_uname1]([one_par_single.attr_type1] [one_par_single.attr_name1]){
+		List<[one_par_single.class_name]> array_all = getAllValid[one_par_single.class_name]();
+		[one_par_single.class_name] rslt = null;
+		
+		for(int i=0;i<array_all.size();i++){
+			[if one_par_single.attr_type1==Long]
+			if(null!=array_all.get(i).get[one_par_single.attr_uname1]()
+				&& array_all.get(i).get[one_par_single.attr_uname1]().equals([one_par_single.attr_name1])){
+			[endif]
+			[if one_par_single.attr_type1==String]
+			if(null!=array_all.get(i).get[one_par_single.attr_uname1]()
+				&& array_all.get(i).get[one_par_single.attr_uname1]().equals([one_par_single.attr_name1])){
+			[endif]	
+				return array_all.get(i);
+			}
+		}
+		
+		return rslt;
+	}
+[endloop one_par_single]
+
+[loop one_par_list]
+	public List<[one_par_list.class_name]> get[one_par_list.class_name]ListBy[one_par_list.attr_uname1]([one_par_list.attr_type1] [one_par_list.attr_name1]){
+		List<[one_par_list.class_name]> array_all = getAllValid[one_par_list.class_name]();
+		List<[one_par_list.class_name]> rslt = new ArrayList<[one_par_list.class_name]>();
+		
+		for(int i=0;i<array_all.size();i++){
+			[if one_par_list.attr_type1==Long]
+			if(null!=array_all.get(i).get[one_par_list.attr_uname1]()
+				&& array_all.get(i).get[one_par_list.attr_uname1]().equals([one_par_list.attr_name1])){
+			[endif]
+			[if one_par_list.attr_type1==String]
+			if(null!=array_all.get(i).get[one_par_list.attr_uname1]()
+				&& array_all.get(i).get[one_par_list.attr_uname1]().equals([one_par_list.attr_name1])){
+			[endif]	
+				rslt.add(array_all.get(i));
+			}
+		}
+		
+		return rslt;
+	}
+[endloop one_par_list]
+
+[loop two_par_single]
+	public [two_par_single.class_name] get[two_par_single.class_name]By[two_par_single.attr_uname1]And[two_par_single.attr_uname2]([two_par_single.attr_type1] [two_par_single.attr_name1], [two_par_single.attr_type2] [two_par_single.attr_name2]){
+		List<[two_par_single.class_name]> array_all = getAllValid[two_par_single.class_name]();
+		[two_par_single.class_name] rslt = null;
+		
+		for(int i=0;i<array_all.size();i++){
+[if two_par_single.attr_type1==Long]
+			if(null!=array_all.get(i).get[two_par_single.attr_uname1]()
+				&& array_all.get(i).get[two_par_single.attr_uname1]().equals([two_par_single.attr_name1])
+[endif]
+[if two_par_single.attr_type1==String]
+			if(null!=array_all.get(i).get[two_par_single.attr_uname1]()
+				&& array_all.get(i).get[two_par_single.attr_uname1]().equals([two_par_single.attr_name1])
+[endif]
+[if two_par_single.attr_type2==Long]
+				&& null!=array_all.get(i).get[two_par_single.attr_uname2]()
+				&& array_all.get(i).get[two_par_single.attr_uname2]().equals([two_par_single.attr_name2])){
+[endif]
+[if two_par_single.attr_type2==String]
+				&& null!=array_all.get(i).get[two_par_single.attr_uname2]()
+				&& array_all.get(i).get[two_par_single.attr_uname2]().equals([two_par_single.attr_name2])){
+[endif]
+				return array_all.get(i);
+			}
+		}
+		
+		return rslt;
+	}
+[endloop two_par_single]
+
+[loop two_par_list]
+	public List<[two_par_list.class_name]> get[two_par_list.class_name]ListBy[two_par_list.attr_uname1]And[two_par_list.attr_uname2]([two_par_list.attr_type1] [two_par_list.attr_name1], [two_par_list.attr_type2] [two_par_list.attr_name2]){
+		List<[two_par_list.class_name]> array_all = getAllValid[two_par_list.class_name]();
+		List<[two_par_list.class_name]> rslt = new ArrayList<[two_par_list.class_name]>();
+		
+		for(int i=0;i<array_all.size();i++){
+[if two_par_list.attr_type1==Long]
+			if(null!=array_all.get(i).get[two_par_list.attr_uname1]()
+				&& array_all.get(i).get[two_par_list.attr_uname1]().equals([two_par_list.attr_name1])
+[endif]
+[if two_par_list.attr_type1==String]
+			if(null!=array_all.get(i).get[two_par_list.attr_uname1]()
+				&& array_all.get(i).get[two_par_list.attr_uname1]().equals([two_par_list.attr_name1])
+[endif]
+[if two_par_list.attr_type2==Long]
+				&& null!=array_all.get(i).get[two_par_list.attr_uname2]()
+				&& array_all.get(i).get[two_par_list.attr_uname2]().equals([two_par_list.attr_name2])){
+[endif]
+[if two_par_list.attr_type2==String]
+				&& null!=array_all.get(i).get[two_par_list.attr_uname2]()
+				&& array_all.get(i).get[two_par_list.attr_uname2]().equals([two_par_list.attr_name2])){
+[endif]
+				rslt.add(array_all.get(i));
+			}
+		}
+		
+		return rslt;
+	}
+[endloop two_par_list]
+
+[loop three_par_single]
+	public [three_par_single.class_name] get[three_par_single.class_name]By[three_par_single.attr_uname1]And[three_par_single.attr_uname2]And[three_par_single.attr_uname3](
+											[three_par_single.attr_type1] [three_par_single.attr_name1], 
+											[three_par_single.attr_type2] [three_par_single.attr_name2],
+											[three_par_single.attr_type3] [three_par_single.attr_name3]){
+		List<[three_par_single.class_name]> array_all = getAllValid[three_par_single.class_name]();
+		[three_par_single.class_name] rslt = null;
+		
+		for(int i=0;i<array_all.size();i++){
+[if three_par_single.attr_type1==Long]
+			if(null!=array_all.get(i).get[three_par_single.attr_uname1]()
+				&& array_all.get(i).get[three_par_single.attr_uname1]().equals([three_par_single.attr_name1])
+[endif]
+[if three_par_single.attr_type1==String]
+			if(null!=array_all.get(i).get[three_par_single.attr_uname1]()
+				&& array_all.get(i).get[three_par_single.attr_uname1]().equals([three_par_single.attr_name1])
+[endif]
+[if three_par_single.attr_type2==Long]
+				&& null!=array_all.get(i).get[three_par_single.attr_uname2]()
+				&& array_all.get(i).get[three_par_single.attr_uname2]().equals([three_par_single.attr_name2])
+[endif]
+[if three_par_single.attr_type2==String]
+				&& null!=array_all.get(i).get[three_par_single.attr_uname2]()
+				&& array_all.get(i).get[three_par_single.attr_uname2]().equals([three_par_single.attr_name2])
+[endif]
+[if three_par_single.attr_type3==Long]
+				&& null!=array_all.get(i).get[three_par_single.attr_uname3]()
+				&& array_all.get(i).get[three_par_single.attr_uname3]().equals([three_par_single.attr_name3])){
+[endif]
+[if three_par_single.attr_type3==String]
+				&& null!=array_all.get(i).get[three_par_single.attr_uname3]()
+				&& array_all.get(i).get[three_par_single.attr_uname3]().equals([three_par_single.attr_name3])){
+[endif]
+				return array_all.get(i);
+			}
+		}
+		
+		return rslt;
+	}
+[endloop three_par_single]
+
+[loop four_par_single]
+	public [four_par_single.class_name] get[four_par_single.class_name]By[four_par_single.attr_uname1]And[four_par_single.attr_uname2]And[four_par_single.attr_uname3]And[four_par_single.attr_uname3](
+											[four_par_single.attr_type1] [four_par_single.attr_name1], 
+											[four_par_single.attr_type2] [four_par_single.attr_name2],
+											[four_par_single.attr_type3] [four_par_single.attr_name3],
+											[four_par_single.attr_type4] [four_par_single.attr_name4]){
+		List<[four_par_single.class_name]> array_all = getAllValid[four_par_single.class_name]();
+		[four_par_single.class_name] rslt = null;
+		
+		for(int i=0;i<array_all.size();i++){
+[if four_par_single.attr_type1==Long]
+			if(null!=array_all.get(i).get[four_par_single.attr_uname1]()
+				&& array_all.get(i).get[four_par_single.attr_uname1]().equals([four_par_single.attr_name1])
+[endif]
+[if four_par_single.attr_type1==String]
+			if(null!=array_all.get(i).get[four_par_single.attr_uname1]()
+				&& array_all.get(i).get[four_par_single.attr_uname1]().equals([four_par_single.attr_name1])
+[endif]
+[if four_par_single.attr_type2==Long]
+				&& null!=array_all.get(i).get[four_par_single.attr_uname2]()
+				&& array_all.get(i).get[four_par_single.attr_uname2]().equals([four_par_single.attr_name2])
+[endif]
+[if four_par_single.attr_type2==String]
+				&& null!=array_all.get(i).get[four_par_single.attr_uname2]()
+				&& array_all.get(i).get[four_par_single.attr_uname2]().equals([four_par_single.attr_name2])
+[endif]
+[if four_par_single.attr_type3==Long]
+				&& null!=array_all.get(i).get[four_par_single.attr_uname3]()
+				&& array_all.get(i).get[four_par_single.attr_uname3]().equals([four_par_single.attr_name3])
+[endif]
+[if four_par_single.attr_type3==String]
+				&& null!=array_all.get(i).get[four_par_single.attr_uname3]()
+				&& array_all.get(i).get[four_par_single.attr_uname3]().equals([four_par_single.attr_name3])
+[endif]
+[if four_par_single.attr_type4==Long]
+				&& null!=array_all.get(i).get[four_par_single.attr_uname4]()
+				&& array_all.get(i).get[four_par_single.attr_uname4]().equals([four_par_single.attr_name4])){
+[endif]
+[if four_par_single.attr_type4==String]
+				&& null!=array_all.get(i).get[four_par_single.attr_uname4]()
+				&& array_all.get(i).get[four_par_single.attr_uname4]().equals([four_par_single.attr_name4])){
+[endif]
+				return array_all.get(i);
+			}
+		}
+		
+		return rslt;
+	}
+[endloop four_par_single]
+}
+
+
+

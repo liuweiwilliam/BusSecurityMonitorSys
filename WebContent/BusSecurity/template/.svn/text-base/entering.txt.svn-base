@@ -1,0 +1,262 @@
+[export]src/com/lzz/bussecurity/action/entering/[class_name].java
+
+package com.lzz.bussecurity.action.entering;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.Transaction;
+
+import com.lzz.bussecurity.action.LzzBaseManagerAction;
+import com.lzz.bussecurity.factory.LzzFactory;
+import com.lzz.bussecurity.mgr.LzzIDMgr;
+
+[loop field_list]
+import com.lzz.bussecurity.pojo.[field_list.class_name];
+import com.lzz.bussecurity.service.[field_list.service_name];
+[endloop field_list]
+
+import com.lzz.bussecurity.utils.lzzClassUtils;
+
+public class [class_name] extends LzzBaseManagerAction {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public String subData;
+	public String id;
+	public String fieldName;
+	public String searchValue;
+[loop field_list]
+	public String addOrUpdate[field_list.class_name]() {
+		HttpServletResponse resp = ServletActionContext.getResponse();
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+		resp.setCharacterEncoding("utf-8");
+
+		JSONObject rsl = new JSONObject();
+		Transaction ts = LzzFactory.currentSession().beginTransaction();
+
+		try {
+			JSONObject [field_list.class_name]Data_obj = JSONObject.fromObject(subData);
+			[field_list.class_name] obj = null;
+			if([field_list.class_name]Data_obj.getString("id").equals("")){
+				obj = new [field_list.class_name]();
+				obj.setId(LzzIDMgr.self().getID());
+			}else{
+				obj = [field_list.service_name].self().get[field_list.class_name]ById([field_list.class_name]Data_obj.getString("id"));
+			}
+			
+			Class clazz = obj.getClass();
+			JSONArray field_array = lzzClassUtils.getClassFields(clazz);
+			for(int i=0; i<field_array.size(); i++){
+				
+				if(field_array.getString(i).equals("id")) continue;
+				
+				String name = field_array.getString(i).substring(0, 1).toUpperCase() + field_array.getString(i).substring(1);
+				Method set_method = clazz.getDeclaredMethod("set" + name, String.class);
+				set_method.invoke(obj, [field_list.class_name]Data_obj.getString(field_array.getString(i)));
+			}
+			
+			if([field_list.class_name]Data_obj.getString("id").equals("")){
+				[field_list.service_name].self().save[field_list.class_name](obj);
+			}else{
+				[field_list.service_name].self().update[field_list.class_name](obj);
+			}
+			
+			ts.commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			ts.rollback();
+			rsl.put("iserror", true);
+			StringWriter sw = new StringWriter();
+			PrintWriter pw = new PrintWriter(sw);
+			e.printStackTrace(pw);
+			rsl.put("errormgr", sw.toString());
+		} finally {
+			LzzFactory.closeSession();
+			PrintWriter writer;
+			try {
+				writer = response.getWriter();
+				writer.append(rsl.toString());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return null;
+	}
+	
+	public String removeSingle[field_list.class_name](){
+		HttpServletResponse resp = ServletActionContext.getResponse();
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+		resp.setCharacterEncoding("utf-8");
+
+		JSONObject rsl = new JSONObject();
+		Transaction ts = LzzFactory.currentSession().beginTransaction();
+
+		try {
+			if(null!=id
+					&& !"".equals(id)
+					&& !"-1".equals(id)){
+				[field_list.service_name].self().del[field_list.class_name]ById(id);
+			}
+			
+			rsl.put("fieldOrder", lzzClassUtils.getClassFields([field_list.class_name].class));
+			
+			ts.commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			ts.rollback();
+			rsl.put("iserror", true);
+			StringWriter sw = new StringWriter();
+			PrintWriter pw = new PrintWriter(sw);
+			e.printStackTrace(pw);
+			rsl.put("errormgr", sw.toString());
+		} finally {
+			LzzFactory.closeSession();
+			PrintWriter writer;
+			try {
+				writer = response.getWriter();
+				writer.append(rsl.toString());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return null;
+	}
+	
+	public String getSingle[field_list.class_name](){
+		HttpServletResponse resp = ServletActionContext.getResponse();
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+		resp.setCharacterEncoding("utf-8");
+
+		JSONObject rsl = new JSONObject();
+		Transaction ts = LzzFactory.currentSession().beginTransaction();
+
+		try {
+			if(id.equals("-1")){
+				rsl = JSONObject.fromObject(new [field_list.class_name]());
+			}else{
+				[field_list.class_name] sin = [field_list.service_name].self().get[field_list.class_name]ById(id);
+				rsl = JSONObject.fromObject(sin);
+			}
+			
+			rsl.put("fieldOrder", lzzClassUtils.getClassFields([field_list.class_name].class));
+			
+			ts.commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			ts.rollback();
+			rsl.put("iserror", true);
+			StringWriter sw = new StringWriter();
+			PrintWriter pw = new PrintWriter(sw);
+			e.printStackTrace(pw);
+			rsl.put("errormgr", sw.toString());
+		} finally {
+			LzzFactory.closeSession();
+			PrintWriter writer;
+			try {
+				writer = response.getWriter();
+				writer.append(rsl.toString());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return null;
+	}
+	
+	public String getAll[field_list.class_name]() {
+		HttpServletResponse resp = ServletActionContext.getResponse();
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+		resp.setCharacterEncoding("utf-8");
+
+		JSONObject rsl = new JSONObject();
+		Transaction ts = LzzFactory.currentSession().beginTransaction();
+
+		try {
+			List<[field_list.class_name]> all = [field_list.service_name].self().getAll[field_list.class_name]IgnoreDr();
+			Collections.reverse(all);
+			filterList(all);
+			JSONArray all_array = JSONArray.fromObject(all);
+			
+			rsl.put("fieldOrder", lzzClassUtils.getClassFields([field_list.class_name].class));
+			
+			rsl.put("allList", all_array);
+			
+			ts.commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			ts.rollback();
+			rsl.put("iserror", true);
+			StringWriter sw = new StringWriter();
+			PrintWriter pw = new PrintWriter(sw);
+			e.printStackTrace(pw);
+			rsl.put("errormgr", sw.toString());
+		} finally {
+			LzzFactory.closeSession();
+			PrintWriter writer;
+			try {
+				writer = response.getWriter();
+				writer.append(rsl.toString());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return null;
+	}
+[endloop field_list]
+	private List filterList(List orig) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+		if(null!=fieldName
+				&& !"".equals(fieldName)
+				&& orig.size()>0){
+			Class clazz = orig.get(0).getClass();
+			String name = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
+			Method get_method = clazz.getDeclaredMethod("get" + name);
+			
+			for(int i=0; i<orig.size(); i++){
+				String field_value = (String) get_method.invoke(orig.get(i));
+				if(!field_value.contains(searchValue)){
+					orig.remove(i);
+					i--;
+				}
+			}
+		}
+		
+		return orig;
+	}
+}
+
+
+[loop field_list]
+<action name="addOrUpdate[field_list.class_name]" class="com.lzz.bussecurity.action.entering.[class_name]" method="addOrUpdate[field_list.class_name]"></action>
+<action name="removeSingle[field_list.class_name]" class="com.lzz.bussecurity.action.entering.[class_name]" method="removeSingle[field_list.class_name]"></action>
+<action name="getAll[field_list.class_name]" class="com.lzz.bussecurity.action.entering.[class_name]" method="getAll[field_list.class_name]"></action>
+<action name="getSingle[field_list.class_name]" class="com.lzz.bussecurity.action.entering.[class_name]" method="getSingle[field_list.class_name]"></action>
+[endloop field_list]
+
+[loop field_list]
+<a class="btn btn-default btn-lg btn-block" target="_blank" href="LzzPojoEntering.html?getAllAction=getAll[field_list.class_name]&getSingleAction=getSingle[field_list.class_name]&addOrUpdateAction=addOrUpdate[field_list.class_name]&removeAction=removeSingle[field_list.class_name]">[field_list.class_name]</a>
+[endloop field_list]
+
+[loop field_list]
+<mapping resource="com/lzz/bussecurity/pojo/[field_list.class_name].hbm.xml"/>
+[endloop field_list]

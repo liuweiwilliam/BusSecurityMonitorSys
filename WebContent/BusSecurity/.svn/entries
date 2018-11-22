@@ -1,0 +1,138 @@
+8
+
+dir
+14853
+svn://47.96.24.30/BusSecurityMonitorSys/WebContent/BusSecurity
+svn://47.96.24.30
+
+
+
+2018-07-19T01:06:38.512186Z
+14696
+liuwei
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10cc15d7-ed91-4ad7-ac41-a70f3bde075a
+
+log.txt
+file
+
+
+
+
+2018-07-31T10:13:37.285085Z
+03f394181d1ebde1350fec3d2dd36ac1
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+
+xml
+dir
+
+config.txt
+file
+
+
+
+
+2018-07-31T10:13:37.244082Z
+d41d8cd98f00b204e9800998ecf8427e
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+
+conf.xml
+file
+
+
+
+
+2018-07-31T10:13:37.237082Z
+3e41f93e38b0ed8c5a0a8b6f0555586d
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+
+系统表.txt
+file
+
+
+
+
+2018-07-31T10:13:37.308086Z
+925e0db965a3094123dc19f8b3cad583
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+
+src
+dir
+
+error.txt
+file
+
+
+
+
+2018-07-31T10:13:37.271084Z
+9884b28d9974cbd28880673d22bd628e
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+
+xmltocode.jar
+file
+
+
+
+
+2018-07-31T10:13:37.301085Z
+c1f3ee2dfe96f039b4f530b41798f8ae
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+has-props
+
+csv
+dir
+
+template
+dir
+
+csvtoxml07192.jar
+file
+
+
+
+
+2018-07-31T10:13:37.262083Z
+cd1f922065b824a5a704da5117b8c88e
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+has-props
+
+config_csv.txt
+file
+
+
+
+
+2018-07-31T10:13:37.251083Z
+5e56c221f97d62e21056a0e5f37fdb7f
+2018-05-20T13:33:46.451248Z
+13427
+liuwei
+

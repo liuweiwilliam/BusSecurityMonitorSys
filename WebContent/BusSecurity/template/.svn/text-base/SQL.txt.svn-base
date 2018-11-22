@@ -1,0 +1,11 @@
+[append]SQL/[table_name].sql
+/*Table structure for table [table_name] */
+
+DROP TABLE IF EXISTS [table_name];
+
+CREATE TABLE [table_name](         /*[table_showname]*/
+[loop list1]
+[list1.fieldname] [list1.dbtype]([list1.dblen]) [list1.dbnull],           /*[list1.fieldshowname]*/
+[endloop list1]
+PRIMARY KEY (id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

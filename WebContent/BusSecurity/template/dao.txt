@@ -1,0 +1,28 @@
+[export]src/com/lzz/bussecurity/basedao/[dao_name].java
+package com.lzz.bussecurity.basedao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+[loop pojo_list]	
+import com.lzz.bussecurity.pojo.[pojo_list.class_name];
+[endloop pojo_list]
+
+public interface [dao_name] {
+
+	public void setSession(Session session);
+
+[loop pojo_list]	
+	public void save[pojo_list.class_name](Object obj);
+
+	public void del[pojo_list.class_name]([pojo_list.class_name] obj2);
+
+	pubilc void update[pojo_list.class_name](Object obj);
+
+	public [pojo_list.class_name] get[pojo_list.class_name](String id);
+	
+	public List<[pojo_list.class_name]> getAll[pojo_list.class_name]s();
+	
+[endloop pojo_list]	
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<style type="text/css">
+	.margin-top{
+		margin-top: 20px;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="container">
+		<div id="info_div">
+			
+		</div>
+		
+		<div class="row justify-content-center margin-top">
+			<div class="col-4 row justify-content-center">
+				<button type="button" onclick="submit()" class="btn btn-primary align-middle">提交</button>
+			</div>
+			<div class="col-4 row justify-content-center">
+				<button type="button" class="btn btn-secondary">清空</button>
+			</div>
+		</div>
+		
+		<i class="fa fa-plus" onclick="fileUpload(1);">上传图片</i>
+		<input name="file" style="display:none" type="file" size="20" id="file">
+		
+		<div style="margin-top:10rem" id="list_div">
+			<table id="list_table" class="table table-striped">
+				<thead>
+					<tr>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+	
+	
+	
+	<script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="../js/ajaxfileupload.js"></script>
+    <script src="../js/bootbox.js"></script>
+    <script type="text/javascript">
+    	var gFieldOrder = new Object();
+    
+    	(function(){
+    		getSingleDetail("-1");
+    		getAllList();
+    	})();
+    
+	    /*-- 附件上传 --*/
+	    function fileUpload(type){
+	    	$("#file").on("change", function(){
+	    		ajaxFileUpload(type);
+	    	});
+	    	$("#file").click();
+	    }
+	    
+	    function ajaxFileUpload(type) {
+	    	$.ajaxFileUpload({  
+	            url:"upload.action?type=" + type, //type表示文件类型 
+	            secureuri:true, 
+	            fileElementId:"file",//上传file控件的id，
+	            dataType:'text', 
+	            beforeSend: function() {
+	            },
+	            success:function(data,status){
+	            	bootbox.alert("上传成功");
+	            	getAllList();
+	            },  
+	            error:function(){  
+	                bootbox.alert("上传失败");
+	            }  
+	        }); 
+	        return 0;
+	    }
+	    
+	    function getAllList(){
+	    	$.ajax({
+    	        type: "GET",
+    	        url: "getAllLzzFileInfo.action",
+    	        dataType: "json",
+    	        beforeSend: function() {
+    	        },
+    	        success: function(data) {
+    	        	console.log(JSON.stringify(data));
+    	        	setListTable(data);
+    	        },
+    	        error: function(XHR) {
+    	            console.log(XHR.status);
+    	        }
+    	    });
+	    }
+	    
+	    function setListTable(data){
+	    	
+	    	$("#list_table thead tr").empty();
+	    	var thead_html = "";
+	    	
+	    	for(var j=0; j<data.fieldOrder.length; ++j){
+	    		thead_html += "<th>" + data.fieldOrder[j] + "</th>";
+    		}
+	    	$("#list_table thead tr").append(thead_html);
+	    	
+	    	$("#list_table tbody").empty();
+	    	var tbody_html = "";
+	    	for(var i=0;i<data.allList.length;i++){
+	    		tbody_html += '<tr class="success" >';
+	    		
+	    		for(var j=0; j<data.fieldOrder.length; ++j){
+	    			console.log(data.allList[i][data.fieldOrder[j]]);
+	    			tbody_html += '<td onclick="getSingleDetail(\''+ data.allList[i].id +'\')">' + data.allList[i][data.fieldOrder[j]] + '</td>';
+	    		}
+	    		
+	    		tbody_html +=		'</tr>';
+	    	}
+    		$("#list_table tbody").append(tbody_html);		
+	    }
+	    
+	    function getSingleDetail(id){
+	    	$.ajax({
+    	        type: "GET",
+    	        url: "getSingleLzzFileInfo.action?id=" + id,
+    	        dataType: "json",
+    	        beforeSend: function() {
+    	        },
+    	        success: function(data) {
+    	        	gFieldOrder = data.fieldOrder;
+    	        	setSingleDetail(data);
+    	        },
+    	        error: function(XHR) {
+    	            console.log(XHR.status);
+    	        }
+    	    });
+	    }
+	    
+		function setSingleDetail(data){
+	    	$("#info_div").empty();
+	    	var info_html = "";
+	    	
+    		for(var i=0; i<data.fieldOrder.length; i++){
+    			console.log(data[data.fieldOrder[i]]);
+    			info_html += '<div class="input-group">';
+    			info_html += '<span style="width:10rem;" class="input-group-addon" id="basic-addon1">' + data.fieldOrder[i] + '</span>';
+    			info_html += '<input type="text" class="form-control" placeholder="'+ data.fieldOrder[i] +'" id="'+ data.fieldOrder[i] +'" value="'+ data[data.fieldOrder[i]] +'" aria-describedby="basic-addon1">';
+    			info_html += '</div>';
+    		}
+	    	
+    		$("#info_div").append(info_html);
+	    }
+		
+		function submit(){
+    		var subData = new Object();
+   			
+    		for(var i=0; i<gFieldOrder.length; i++){
+    			subData[gFieldOrder[i]] = $("#" + gFieldOrder[i]).val();
+    		}
+    		
+    		$.ajax({
+    	        type: "POST",
+    	        data: "subData=" + JSON.stringify(subData),
+    	        url: "addOrUpdateLzzFileInfo.action",
+    	        dataType: "json",
+    	        beforeSend: function() {
+    	        },
+    	        success: function(data) {
+    	        	bootbox.alert("提交成功");
+    	        },
+    	        error: function(XHR) {
+    	        	bootbox.alert("提交失败");
+    	            console.log(XHR.status);
+    	        }
+    	    });
+    	}
+    </script>
+</body>
+</html>

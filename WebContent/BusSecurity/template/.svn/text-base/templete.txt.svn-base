@@ -1,0 +1,25 @@
+[append]src_raw/[class_name].java
+
+public class [class_name] {
+
+[loop list1]	
+	private [list1.datatype] [list1.fieldname];
+[endloop list1]
+	
+	public [class_name](){};
+	
+	public [class_name]([class_name] [object_name]){
+[loop list1]
+	    [list1.fieldname] = [object_name].get[list1.fielduname]();
+[endloop list1]
+	}
+
+[loop list1]
+	public [list1.datatype] get[list1.fielduname]() {
+	    return [list1.fieldname];
+	}
+	public void set[list1.fielduname]([list1.datatype] [list1.fieldname]) {
+	    this.[list1.fieldname] = [list1.fieldname];
+	}
+[endloop list1]
+}

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>控制台登录</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/supersized.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="page-container">
+            <h1>控制台登录</h1>
+            <form action="loginForLzzManager.action" id="loginForm" method="get" onsubmit="return login();">
+                <input type="text" name="phone" id="phone" class="username" placeholder="Username">
+                <input type="password" name="pwd" id="pwd" class="password" placeholder="Password">
+                <button type="submit">登陆</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class="connect">
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/supersized.3.2.7.min.js"></script>
+        <script src="assets/js/supersized-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var sessionId = getCookie("sessionId");
+				if(""!=sessionId){
+					window.location.href="../../shell.html";
+				}else{
+					console.log("session is null");
+				}
+			});
+		
+			//获取cookie中的值
+			function getCookie(c_name){
+				if (document.cookie.length>0){
+					alert(document.cookie);
+					c_start=document.cookie.indexOf(c_name + "=")
+					if (c_start!=-1){ 
+						c_start=c_start + c_name.length+1;
+						c_end=document.cookie.indexOf(";",c_start);
+						if (c_end==-1){
+							c_end=document.cookie.length
+						}
+				    	return unescape(document.cookie.substring(c_start,c_end));
+				    }
+				}
+				return ""
+			}
+			
+			function login(){
+				$("#loginForm").ajaxSubmit(function(message) { 
+					if("fail"==message.result){
+						alert("用户名或密码错误！");
+						return false;
+					}
+					window.location.href="../../shell.html";
+				});
+				return false;
+			}
+		</script>
+    </body>
+
+</html>
+

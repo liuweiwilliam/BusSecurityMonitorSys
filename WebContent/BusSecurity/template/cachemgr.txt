@@ -1,0 +1,220 @@
+[export]src/com/lzz/bussecurity/cachemgr/[cache_mgr_name].java
+package com.lzz.bussecurity.cachemgr;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Vector;
+
+import org.hibernate.Session;
+[loop pojo_list]
+import com.lzz.bussecurity.pojo.[pojo_list.class_name];
+[endloop pojo_list]
+
+import com.lzz.bussecurity.factory.LzzFactory;
+import com.lzz.bussecurity.dao.LzzDao;
+public class [cache_mgr_name]{
+  private Session session;
+	private LzzDao dao;
+[loop pojo_list]
+[if pojo_list.needcache==TRUE]
+	private Vector<[pojo_list.class_name]> m[pojo_list.class_name]s;
+	private boolean m[pojo_list.class_name]sLoaded;
+	private Hashtable<String, [pojo_list.class_name]> m[pojo_list.class_name]Hash;
+[endif]
+[endloop pojo_list]
+
+	// Singleton functions ( construction is private)
+	private final static [cache_mgr_name] singleton = new [cache_mgr_name] ();	
+	public static [cache_mgr_name] self(){
+		return singleton;
+	}
+	public [cache_mgr_name] getSelf(){
+		return self();
+	}
+	private [cache_mgr_name] (){
+		dao = new LzzDao();
+[loop pojo_list]
+[if pojo_list.needcache==TRUE]
+		m[pojo_list.class_name]s = new Vector<[pojo_list.class_name]>();
+		m[pojo_list.class_name]sLoaded = false;
+		m[pojo_list.class_name]Hash = new Hashtable<String,[pojo_list.class_name]>();
+[endif]		
+[endloop pojo_list]
+	}
+[loop pojo_list]
+[if pojo_list.needcache==TRUE]
+	synchronized private boolean load[pojo_list.class_name]s(){
+
+		if(!m[pojo_list.class_name]sLoaded){
+			session = LzzFactory.currentSession();
+			dao.setSession(session);
+			List<[pojo_list.class_name]> array = (List<[pojo_list.class_name]>)dao.queryAll("[pojo_list.table_name]", [pojo_list.class_name].class);
+			
+			for(int i = 0;i < array.size();i++){
+				m[pojo_list.class_name]s.add(array.get(i));
+				m[pojo_list.class_name]Hash.put(array.get(i).getId(), array.get(i));
+			}
+			m[pojo_list.class_name]sLoaded = true;
+		}
+		return true;
+	}
+[endif]
+[endloop pojo_list]
+
+	public boolean loadAllDB(){
+[loop pojo_list]
+[if pojo_list.needcache==TRUE]
+		load[pojo_list.class_name]s();	
+[endif]
+[endloop pojo_list]
+		return true;
+	}
+
+	public boolean clearCache(){
+[loop pojo_list]
+[if pojo_list.needcache==TRUE]
+		m[pojo_list.class_name]s.clear();
+		m[pojo_list.class_name]sLoaded = false;
+		m[pojo_list.class_name]Hash.clear();
+[endif]
+[endloop pojo_list]	
+		return true;
+	}
+
+	public boolean reloadCache(){
+		clearCache();
+		loadAllDB();
+		return true;
+	}
+	
+
+[loop pojo_list]
+	// save new object(if you want to change an exist object, please call other functions.)
+	public void save[pojo_list.class_name](Object obj) {
+[if pojo_list.needcache==TRUE]
+		load[pojo_list.class_name]s();
+		session = LzzFactory.currentSession();
+		dao.setSession(session);
+		dao.save(obj);
+		[pojo_list.class_name] obj2 = ([pojo_list.class_name])obj;
+		m[pojo_list.class_name]s.add(obj2);
+		m[pojo_list.class_name]Hash.put(obj2.getId(), obj2);
+[endif]
+[if pojo_list.needcache==FALSE]
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		tmp_dao.save(obj);
+[endif]
+	}
+	public void del[pojo_list.class_name](Object obj) {
+[if pojo_list.needcache==TRUE]
+		load[pojo_list.class_name]s();
+
+		[pojo_list.class_name] obj2 = ([pojo_list.class_name])obj;
+		
+		session = LzzFactory.currentSession();
+		dao.setSession(session);
+		
+		dao.delete(m[pojo_list.class_name]Hash.get(obj2.getId()));
+
+		for([pojo_list.class_name] msg : m[pojo_list.class_name]s){
+			if(msg.getId().equals(obj2.getId())){
+				m[pojo_list.class_name]s.remove(msg);
+				break;
+			}
+		}
+		m[pojo_list.class_name]Hash.remove(obj2.getId());
+[endif]	
+[if pojo_list.needcache==FALSE]
+		[pojo_list.class_name] obj2 = ([pojo_list.class_name])obj;
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		tmp_dao.delete(obj);
+[endif]	
+	}
+	public void update[pojo_list.class_name](Object obj) {
+[if pojo_list.needcache==TRUE]
+		load[pojo_list.class_name]s();
+		
+		for(int i = 0; i < m[pojo_list.class_name]s.size(); i++){
+			if(m[pojo_list.class_name]s.get(i).getId().equals((([pojo_list.class_name])obj).getId())){
+					m[pojo_list.class_name]s.set(i, ([pojo_list.class_name]) obj);
+					break;
+			}
+		}
+		[pojo_list.class_name] tmp = m[pojo_list.class_name]Hash.get((([pojo_list.class_name])obj).getId());
+		tmp.constructWith(([pojo_list.class_name])obj);
+		
+		//m[pojo_list.class_name]Hash.remove((([pojo_list.class_name])obj).getId());
+		//m[pojo_list.class_name]Hash.put((([pojo_list.class_name])obj).getId(), ([pojo_list.class_name])obj);
+		session = LzzFactory.currentSession();
+		dao.setSession(session);
+		//dao.update(obj);
+		dao.update(tmp);
+[endif]
+[if pojo_list.needcache==FALSE]
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		tmp_dao.update(obj);
+[endif]
+	}
+
+	public List<[pojo_list.class_name]> getAll[pojo_list.class_name]() {
+[if pojo_list.needcache==TRUE]
+		load[pojo_list.class_name]s();
+		
+		List<[pojo_list.class_name]> objects = new ArrayList<[pojo_list.class_name]>();
+		for(int i = 0;i < m[pojo_list.class_name]s.size(); i++)
+		{
+			objects.add(m[pojo_list.class_name]s.get(i).clone());
+		}
+		return objects;
+[endif]
+[if pojo_list.needcache==FALSE]
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		return (List<[pojo_list.class_name]>)tmp_dao.queryAll("[pojo_list.table_name]", [pojo_list.class_name].class);
+[endif]
+	}
+
+	public [pojo_list.class_name] get[pojo_list.class_name]ById(String id){
+[if pojo_list.needcache==TRUE]
+		if(null==id) return null;
+		load[pojo_list.class_name]s();
+		if(null==m[pojo_list.class_name]Hash.get(id)) return null;
+		return m[pojo_list.class_name]Hash.get(id).clone();
+[endif]
+[if pojo_list.needcache==FALSE]
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		[pojo_list.class_name] data = ([pojo_list.class_name])tmp_dao.queryById("[pojo_list.table_name]", [pojo_list.class_name].class, id);
+		if(null==data) return null;
+		return data.clone();
+[endif]
+	}
+	
+[if pojo_list.needcache==FALSE]		
+	public List<[pojo_list.class_name]> getLzzSensorDataList(String start_index, String size){
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		List<[pojo_list.class_name]> list = tmp_dao.queryWithLimitCount("[pojo_list.table_name]", [pojo_list.class_name].class, start_index, size);
+		return list;
+	}
+
+	public Long getLzzSensorDatasTotalCount(){
+		Session session = LzzFactory.currentSession();
+		LzzDao tmp_dao = new LzzDao();
+		tmp_dao.setSession(session);
+		return tmp_dao.queryCount("[pojo_list.table_name]");
+	}
+[endif]
+[endloop pojo_list]
+
+}

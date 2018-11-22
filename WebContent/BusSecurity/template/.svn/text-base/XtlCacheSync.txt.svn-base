@@ -1,0 +1,111 @@
+[export]src/com/xtl/[project_name]/XtlCacheSync.java
+package com.xtl.[project_name];
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+
+import com.xtl.[project_name].basedao.[dao_name];
+import com.xtl.[project_name].daoimp.[dao_imp_class];
+[loop sefactory_list]
+import com.xtl.[project_name].sefactory.[sefactory_list.class_name];
+[endloop sefactory_list]
+[loop pojo_list]	
+import com.xtl.[project_name].pojo.[pojo_list.class_name];
+[endloop pojo_list]
+import com.xtl.[project_name].utils.XtlProperties;
+
+public class XtlCacheSync{
+
+	private  static Session session;
+	private  static [dao_name] dao;
+	
+[loop pojo_list]	
+	private List<[pojo_list.class_name]> m[pojo_list.class_name]s=new ArrayList<[pojo_list.class_name]>();
+	private Hashtable<String,[pojo_list.class_name]> m[pojo_list.class_name]Hashnew Hashtable<String,[pojo_list.class_name]>();
+[endloop pojo_list]
+
+[loop pojo_list]
+   public static void syncAll[pojo_list.class_name](){
+		session = XtlSeFactoryLocal.currentSession();
+		dao = new [dao_imp_class]();
+		dao.setSession(session);
+
+			m[pojo_list.class_name]s = dao.getAll[pojo_list.class_name]s();
+			Hashtable<String,String> key_status = new Hashtable<String, String>();
+
+			for(int i = 0;i < m[pojo_list.class_name]s.size();i++){
+			m[pojo_list.class_name]Hash.put(m[pojo_list.class_name]s.get(i).getId(), m[pojo_list.class_name]s.get(i));
+			key_status.put(m[pojo_list.class_name]s.get(i).getId(), "0");
+		}
+		        List<[pojo_list.class_name]> cache_pros = [cache_mgr_name].self().getAll[pojo_list.class_name]();
+
+
+			for(int i=0; i<cache_pros.size(); i++){
+		
+			[pojo_list.class_name] pro = cache_pros.get(i);
+			
+			
+			if(null!=m[pojo_list.class_name]Hash.get(pro.getId())){
+				key_status.put(pro.getId(), "1");
+				if(m[pojo_list.class_name]Hash.get(pro.getId()).equals(pro)){
+					continue;
+				}
+				update[pojo_list.class_name](pro);
+			}else{
+				save[pojo_list.class_name]2(pro);
+			}
+		}
+
+
+                     //remove all the pros which status is 0
+		//deleteXtlProject(pro);
+		Enumeration k = key_status.keys();
+		while(k.hasMoreElements()){ 
+			String key = (String) k.nextElement();
+			if(null!=key_status.get(key)
+					&& key_status.get(key).equals("0")){
+				[pojo_list.class_name] pro = m[pojo_list.class_name]Hash.get(key);
+				delete[pojo_list.class_name](pro);
+			}
+		}
+	}
+	[endloop pojo_list]
+
+[loop pojo_list]	
+public static void update[pojo_list.class_name]([pojo_list.class_name] pro){
+		XtlProperties.setDbfalg("true");
+		// add pojo constructor
+		[pojo_list.class_name] db = dao.get[pojo_list.class_name](pro.getId());
+		db.constructWith(pro);
+		[cache_mgr_name].self().update[pojo_list.class_name](db);
+		XtlProperties.setDbfalg("false");
+	}
+	
+	public static void save[pojo_list.class_name]2([pojo_list.class_name] pro){
+		XtlProperties.setDbfalg("true");
+		save[pojo_list.class_name]ToDb(pro);
+		XtlProperties.setDbfalg("false");
+	}
+	
+	public static void delete[pojo_list.class_name]([pojo_list.class_name] pro){
+		XtlProperties.setDbfalg("true");
+		[cache_mgr_name].self().del[pojo_list.class_name](pro);
+		XtlProperties.setDbfalg("false");
+	}
+	
+	public static void save[pojo_list.class_name]ToDb(Object obj) {
+		session = XtlSeFactoryLocal.currentSession();
+		dao.setSession(session);
+		dao.save[pojo_list.class_name](obj);
+	}
+
+
+
+[endloop pojo_list]

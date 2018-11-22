@@ -1,0 +1,24 @@
+.hide{
+	display:none;
+}
+
+.b-black{
+	background-color:black;
+}
+
+.b-gray{
+	background-color:#B0B0B0;
+}
+
+.b-darkgray{
+	background-color:#505050;
+}
+
+.b-red{
+	background-color:red;
+}
+
+.b-darkred{
+	background-color:#580000;
+}
+

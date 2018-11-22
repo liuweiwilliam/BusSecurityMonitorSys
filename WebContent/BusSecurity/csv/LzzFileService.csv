@@ -1,0 +1,11 @@
+文件名,xml/LzzFileService.xml,
+全局变量,project_name,bussecurity
+全局变量,service_name,LzzFileService
+全局变量,dao_imp_class,XtlDaoImp
+全局变量,service_pack,service
+全局变量,dao_name,LzzDao
+全局变量,cache_name,LzzFileCacheMgr
+表,service_list,
+,class_name,
+,LzzFileInfo,
+,LzzFileGroup,
