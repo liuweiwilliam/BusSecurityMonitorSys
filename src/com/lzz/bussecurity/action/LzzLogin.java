@@ -71,4 +71,8 @@ public class LzzLogin extends LzzBaseManagerAction {
 		return null;
 	}
 	
+	public static void main(String[] args) throws Exception {
+		System.out.println(LzzEncodeMgr.MD5("123456", "utf-8"));
+	}
+	
 }
